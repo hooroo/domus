@@ -16,12 +16,13 @@ ActiveRecord::Schema.define(version: 20171208043003) do
   enable_extension "plpgsql"
 
   create_table "families", force: :cascade do |t|
-    t.string "name"
-    t.string "surname"
+    t.string "first_name"
+    t.string "last_name", null: false
     t.string "address"
     t.string "animals"
-    t.string "capability"
+    t.integer "capability", null: false
     t.boolean "prof"
+    t.string "preffered_gender"
     t.boolean "bus_driver"
     t.boolean "active"
     t.datetime "created_at", null: false
