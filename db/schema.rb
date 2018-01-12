@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20171208043003) do
     t.string "animals"
     t.integer "capability", null: false
     t.boolean "prof"
-    t.string "preffered_gender"
+    t.string "preferred_gender"
     t.boolean "bus_driver"
     t.boolean "active"
     t.datetime "created_at", null: false
