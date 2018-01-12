@@ -1,26 +1,23 @@
 class FamiliesController < ApplicationController
-  def new
+  def index
+    @family = Family.new
+    @families = Family.display
   end
 
   def create
-    family = Family.new
-    family.first_name = params[:first_name]
-    family.last_name = params[:last_name]
-    family.address = params[:address]
-    family.animals = params[:animals]
-    family.capability = params[:capability]
-    family.prof = params[:prof]
-    family.preffered_gender = params[:preffered_gender]
-    family.bus_driver = params[:bus_driver]
-    family.active = params[:active]
-
+    family = Family.create(family_params)
     if family.save
-      redirect_to '/'
+      redirect_to root_path
     else
-      #
+      redirect_to '/'
     end
   end
 
   def destroy
+  end
+
+  private
+  def family_params
+    params.require(:family).permit(:first_name, :last_name, :address, :animals, :capability, :preffered_gender, :prof, :bus_driver, :active)
   end
 end
