@@ -1,9 +1,14 @@
 class FamiliesController < ApplicationController
+
+
   def index
-    @family = Family.new
     @families = Family.display
   end
 
+  def new
+    @family = Family.new
+  end
+  
   def create
     family = Family.create(family_params)
     if family.save
