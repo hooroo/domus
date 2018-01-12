@@ -1,20 +1,18 @@
 class FamiliesController < ApplicationController
-
-
   def index
-    @families = Family.display
+    @families = Family.all
   end
 
   def new
     @family = Family.new
   end
-  
+
   def create
     family = Family.create(family_params)
     if family.save
       redirect_to root_path
     else
-      redirect_to '/'
+      redirect_to "/"
     end
   end
 
