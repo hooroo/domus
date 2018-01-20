@@ -1,4 +1,4 @@
-require_relative 'boot'
+require_relative "boot"
 
 require "rails"
 # Pick the frameworks you want:
@@ -29,5 +29,4 @@ module Domus
       generate.view_specs false
     end
   end
-
 end
