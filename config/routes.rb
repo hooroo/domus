@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root :to => '/'
+  resources :families
+
+  root "families#index"
 end
