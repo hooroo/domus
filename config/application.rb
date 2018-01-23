@@ -15,6 +15,9 @@ Bundler.require(*Rails.groups)
 
 module Domus
   class Application < Rails::Application
+    # Use the responders controller from the responders gem
+    config.app_generators.scaffold_controller :responders_controller
+
 
     config.middleware.use ::Rack::Auth::Basic do |u, p|
       [u, p] == [ENV["BASIC_AUTH_USERNAME"], ENV["BASIC_AUTH_PASSWORD"]]
