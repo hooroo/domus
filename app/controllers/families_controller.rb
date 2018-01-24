@@ -8,15 +8,8 @@ class FamiliesController < ApplicationController
   end
 
   def create
-    family = Family.create(family_params)
-    if family.save
-      redirect_to root_path
-    else
-      redirect_to "/"
-    end
-  end
-
-  def destroy
+    @family = Family.create(family_params)
+    respond_with @family
   end
 
   private
