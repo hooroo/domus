@@ -1,2 +1,2 @@
-FactoryBot.define do  
+FactoryBot.define do
 end
