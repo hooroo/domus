@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  root :to => '/'
+  resources :families, only: [:index, :new, :create]
+
+  root "families#index"
 end
