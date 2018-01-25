@@ -7,8 +7,7 @@ SimpleForm.setup do |config|
   # whole input.
   config.wrappers :default,
     class: :input,
-    hint_class: :field_with_hint,
-    error_class: :field_with_errors do |b|
+    hint_class: :field_with_hint, error_class: :field_with_errors do |b|
     ## Extensions enabled by default
     # Any of these extensions can be disabled for a
     # given input by passing: `f.input EXTENSION_NAME => false`.
@@ -67,7 +66,11 @@ SimpleForm.setup do |config|
   config.boolean_style = :nested
 
   # Default class for buttons
+<<<<<<< HEAD
   config.button_class = "btn"
+=======
+  config.button_class = 'btn'
+>>>>>>> 4689bfd... Add simple form gem and flash messages to rend it
 
   # Method used to tidy up errors. Specify any Rails Array method.
   # :first lists the first message for each field.
@@ -78,7 +81,11 @@ SimpleForm.setup do |config|
   config.error_notification_tag = :div
 
   # CSS class to add for error notification helper.
+<<<<<<< HEAD
   config.error_notification_class = "error_notification"
+=======
+  config.error_notification_class = 'error_notification'
+>>>>>>> 4689bfd... Add simple form gem and flash messages to rend it
 
   # ID to add for error notification helper.
   # config.error_notification_id = nil
@@ -150,7 +157,11 @@ SimpleForm.setup do |config|
   # When false, do not use translations for labels.
   # config.translate_labels = true
 
+<<<<<<< HEAD
   # Automatically discover new inputs in Rails" autoload path.
+=======
+  # Automatically discover new inputs in Rails' autoload path.
+>>>>>>> 4689bfd... Add simple form gem and flash messages to rend it
   # config.inputs_discovery = true
 
   # Cache SimpleForm inputs discovery
@@ -160,12 +171,20 @@ SimpleForm.setup do |config|
   # config.input_class = nil
 
   # Define the default class of the input wrapper of the boolean input.
+<<<<<<< HEAD
   config.boolean_label_class = "checkbox"
+=======
+  config.boolean_label_class = 'checkbox'
+>>>>>>> 4689bfd... Add simple form gem and flash messages to rend it
 
   # Defines if the default input wrapper class should be included in radio
   # collection wrappers.
   # config.include_default_input_wrapper_class = true
 
   # Defines which i18n scope will be used in Simple Form.
+<<<<<<< HEAD
   # config.i18n_scope = "simple_form"
+=======
+  # config.i18n_scope = 'simple_form'
+>>>>>>> 4689bfd... Add simple form gem and flash messages to rend it
 end
