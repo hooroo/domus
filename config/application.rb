@@ -15,14 +15,11 @@ Bundler.require(*Rails.groups)
 
 module Domus
   class Application < Rails::Application
+    config.app_generators.scaffold_controller :responders_controller
 
-    config.middleware.use ::Rack::Auth::Basic do |u, p|
-      [u, p] == [ENV["BASIC_AUTH_USERNAME"], ENV["BASIC_AUTH_PASSWORD"]]
-    end
-
+    config.action_controller.action_on_unpermitted_parameters = :raise
     config.load_defaults 5.1
     config.generators.system_tests = nil
-    config.action_controller.action_on_unpermitted_parameters = :raise
 
     config.generators do |generate|
       generate.helper false
