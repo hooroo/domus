@@ -9,6 +9,7 @@ class FamiliesController < ApplicationController
 
   def create
     @family = Family.create(family_params)
+
     respond_with @family, location: -> { families_path }
   end
 
@@ -24,7 +25,7 @@ class FamiliesController < ApplicationController
       :preferred_gender,
       :prof,
       :bus_driver,
-      :active
+      :active,
     )
   end
 end
