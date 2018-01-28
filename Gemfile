@@ -16,6 +16,7 @@ group :development, :test do
   gem "hirb"
   gem "pry-byebug"
   gem "rspec-rails", "3.6.1"
+  gem "rubocop"
 end
 
 group :development do

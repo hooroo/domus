@@ -15,6 +15,11 @@ Bundler.require(*Rails.groups)
 
 module Domus
   class Application < Rails::Application
+
+    config.middleware.use ::Rack::Auth::Basic do |u, p|
+      [u, p] == [ENV["BASIC_AUTH_USERNAME"], ENV["BASIC_AUTH_PASSWORD"]]
+    end
+
     config.load_defaults 5.1
     config.generators.system_tests = nil
     config.action_controller.action_on_unpermitted_parameters = :raise
