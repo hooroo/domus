@@ -39,7 +39,7 @@ Style/IfUnlessModifier:
   Enabled: false
 Style/MixinUsage:
   Exclude:
-    - "bin/update"
+    - "bin/*"
 Style/MutableConstant:
   Exclude:
     - "config/**/*"
