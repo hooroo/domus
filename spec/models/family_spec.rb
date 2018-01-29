@@ -1,19 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe Family do
+describe Family do
   describe "validations" do
-    subject { Family.new(last_name: nil) }
+    context "is valid only if last_name and capability are present" do
 
-    context "when creating a new family with no last_name is not valid" do
-      it { should_not allow_value(nil).for(:last_name)}
-    end
-
-    context "when creating a new family with no capability is not valid" do
-      it { should_not allow_value(nil).for(:capability)}
-    end
-
-    context "when creating a new family that is valid it is saved" do
-      it { expect(build(:family)).to be_valid }
+      it { is_expected.to validate_presence_of(:last_name) }
+      it { is_expected.to validate_presence_of(:capability) }
     end
   end
 end
