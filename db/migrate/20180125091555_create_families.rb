@@ -6,10 +6,10 @@ class CreateFamilies < ActiveRecord::Migration[5.1]
       t.string :address
       t.string :animals
       t.string :capability, null: false
+      t.string :preferred_gender
       t.boolean :prof, default: false
       t.boolean :bus_driver, default: false
       t.boolean :active, default: true
-      t.timestamps
       t.timestamps
     end
   end
