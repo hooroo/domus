@@ -1,12 +1,11 @@
 Rails.application.configure do
-
   config.cache_classes = true
 
   config.eager_load = false
 
   config.public_file_server.enabled = true
   config.public_file_server.headers = {
-    "Cache-Control" => "public, max-age=#{1.hour.seconds.to_i}"
+    "Cache-Control" => "public, max-age=#{1.hour.seconds.to_i}",
   }
 
   # Show full error reports and disable caching.
