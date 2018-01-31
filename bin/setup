@@ -23,8 +23,4 @@ chdir APP_ROOT do
 
   puts "\n== Restarting application server =="
   system! "bin/rails restart"
-
-  unless File.exist?("config/database.yml")
-    cp "config/database.yml.sample", 'config/database.yml"
-  end
 end
