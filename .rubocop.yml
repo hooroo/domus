@@ -1,0 +1,56 @@
+AllCops:
+  Exclude:
+    - "Gemfile.lock"
+    - "spec/spec_helper.rb"
+EndOfLine:
+  Enabled: false
+Layout/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+Layout/EmptyLinesAroundClassBody:
+  Enabled: false
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+Layout/IndentationConsistency:
+  Enabled: true
+Metrics/BlockLength:
+  Exclude:
+    - "spec/**/*"
+    - "config/**/*"
+    - "bin/*"
+Metrics/LineLength:
+  Max: 80
+  Exclude:
+    - "config/**/*"
+Naming/ClassAndModuleCamelCase:
+  Enabled: true
+Naming/ConstantName:
+  Enabled: true
+Style/DefWithParentheses:
+  Enabled: true
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/IdenticalConditionalBranches:
+  Enabled: true
+Style/IfInsideElse:
+  Enabled: false
+Style/IfUnlessModifier:
+  Enabled: false
+Style/MixinUsage:
+  Exclude:
+    - "bin/*"
+Style/MutableConstant:
+  Exclude:
+    - "config/**/*"
+Style/NegatedIf:
+  Enabled: true
+Style/OneLineConditional:
+  Enabled: false
+Style/StderrPuts:
+  Exclude:
+    - "bin/*"
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: consistent_comma
