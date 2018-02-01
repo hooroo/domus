@@ -1,2 +1,9 @@
 it:
-  hello: "Ciao mondo"
+  application:
+    show:
+      title: "Domus"
+
+  families:
+    new:
+      title: "Aggiungi una famiglia"
+      submit: "Aggiungi"

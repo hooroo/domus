@@ -5,8 +5,16 @@ en:
     required:
       text: 'required'
       mark: '*'
-      # You can uncomment the line below if you need to overwrite the whole required html.
-      # When using html, text and mark won't be used.
-      # html: '<abbr title="required">*</abbr>'
-      error_notification:
-        default_message: "Please review the problems below:"
+    labels:
+      family:
+        title: "Add a family"
+        first_name: "First Name"
+        last_name: "Last Name"
+        address: "Address"
+        animals: "Animals"
+        capability: "Capability"
+        prof: "Prof"
+        bus_driver: "Bus Driver"
+        active: "Active"
+        preferred_gender: "Proferred Gender"
+        submit: "Add"
