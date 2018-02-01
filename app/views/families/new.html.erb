@@ -1,13 +1,13 @@
-<p>Add a Family</p>
+<p><%= t(".title") %></p>
 <%= simple_form_for @family do |f| %>
-  <%= f.input :first_name, placeholder: 'first_name' %>
-  <%= f.input :last_name, placeholder: 'last_name' %>
-  <%= f.input :address, placeholder: 'address' %>
-  <%= f.input :animals, placeholder: 'animals' %>
-  <%= f.input :capability, placeholder: 'capability' %>
-  <%= f.input :prof, as: :radio_buttons, collection: ['Y', 'N'] %>
-  <%= f.input :preferred_gender, as: :radio_buttons, collection: ['F', 'M'] %>
-  <%= f.input :bus_driver, as: :radio_buttons, collection: ['Y', 'N'] %>
-  <%= f.input :active, as: :radio_buttons, collection: ['Y', 'N'] %>
-  <%= f.button :submit %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :address %>
+  <%= f.input :animals %>
+  <%= f.input :capability %>
+  <%= f.input :prof, as: :radio_buttons, collection: ["Y", "N"] %>
+  <%= f.input :preferred_gender, as: :radio_buttons, collection: ["F", "M"] %>
+  <%= f.input :bus_driver, as: :radio_buttons, collection: ["Y", "N"] %>
+  <%= f.input :active, as: :radio_buttons, collection: ["Y", "N"] %>
+  <%= f.submit t(".submit") %>
 <% end %>
