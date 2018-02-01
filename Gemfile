@@ -16,7 +16,7 @@ group :development, :test do
   gem "factory_bot_rails"
   gem "hirb"
   gem "pry-byebug"
-  gem "rspec-rails", "3.6.1"
+  gem "rspec-rails", "3.7.2"
   gem "rubocop"
 end
 
@@ -28,7 +28,7 @@ group :development do
 end
 
 group :test do
-  gem "capybara-webkit"
+  gem "capybara-webkit", "~> 1.14"
   gem "database_cleaner"
   gem "launchy"
   gem "rails-controller-testing"
