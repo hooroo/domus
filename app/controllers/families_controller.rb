@@ -9,12 +9,9 @@ class FamiliesController < ApplicationController
 
   def create
     @family = Family.create(family_params)
-    respond_with @family
+    respond_with @family, location: -> { families_path }
   end
 
-  def index
-    @families = Family.all
-  end
 
   private
   def family_params
