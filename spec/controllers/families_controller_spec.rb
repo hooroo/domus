@@ -2,18 +2,18 @@ require "rails_helper"
 
 RSpec.describe FamiliesController do
   describe "POST /families" do
-    context  "when invalid params" do
+    context "when invalid params" do
       it "doesn't create a new family" do
-        expect {
+        expect do
           post :create, params: { family: { first_name: "John" } }
-        }.not_to change(Family, :count)
+        end.not_to change(Family, :count)
       end
 
       it "sets an alert message" do
         post :create, params: { family: { first_name: "John" } }
 
-        expect( flash[:alert] ).
-          to match(
+        expect(flash[:alert])
+          .to match(
             I18n.t("flash.actions.create.alert", resource_name: "Family")
           )
       end

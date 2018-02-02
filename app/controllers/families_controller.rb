@@ -12,8 +12,8 @@ class FamiliesController < ApplicationController
     respond_with @family, location: -> { families_path }
   end
 
-
   private
+
   def family_params
     params.require(:family).permit(
       :first_name,

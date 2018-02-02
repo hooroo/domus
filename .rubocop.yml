@@ -12,6 +12,10 @@ Layout/EmptyLineBetweenDefs:
   Enabled: true
 Layout/IndentationConsistency:
   Enabled: true
+Metrics/MethodLength:
+  Exclude:
+    - "app/controllers/families_controller.rb"
+    - "db/**/*"  
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*"
@@ -21,6 +25,7 @@ Metrics/LineLength:
   Max: 80
   Exclude:
     - "config/**/*"
+  IgnoredPatterns: ['\A#']
 Naming/ClassAndModuleCamelCase:
   Enabled: true
 Naming/ConstantName:
@@ -45,6 +50,9 @@ Style/MutableConstant:
     - "config/**/*"
 Style/NegatedIf:
   Enabled: true
+Style/NumericLiterals:
+  Exclude:
+    - "db/*"
 Style/OneLineConditional:
   Enabled: false
 Style/StderrPuts:
