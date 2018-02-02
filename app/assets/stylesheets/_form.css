@@ -6,16 +6,11 @@ p {
 .simple_form {
   width: 40%;
   border: 2px solid black;
-  padding: 30px;
-  margin: 0 auto;
-  background-color: #B0C4DE;
-  font-size: 1.5em;
-}
-
-input.string {
-  border: 1px solid grey;
-  width: 100%;
   padding: 10px;
+  margin: 0 auto;
+  background-color: #e6ffe6;
+  /* background-color: white; */
+  font-size: 1.5em;
 }
 
 label {
@@ -27,11 +22,11 @@ label {
   margin-bottom: 10px;
 }
 
-input[type="submit"] {
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 20%;
-  font-size: 1em;
+input[type="text"] {
+  border: 1px solid grey;
+  width: 100%;
+  padding: 1em;
+  box-sizing : border-box;
 }
 
 input[type=radio] {
@@ -39,7 +34,11 @@ input[type=radio] {
   margin-left: 1em;
 }
 
-span.radio {
+input[type="submit"] {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 20%;
+  font-size: 1em;
 }
 
 span.error {
