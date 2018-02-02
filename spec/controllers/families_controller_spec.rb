@@ -1,19 +1,27 @@
 require "rails_helper"
 
-# controller specs for the sad path - i.e. trying to create a new family without required attributes => testing to see that the flash message was set correctly, and the rendered template is :new rather than :index, and that the object has error messages on it
 RSpec.describe FamiliesController do
   describe "POST /families" do
-    context "with invalid params" do
-      it "does not create a new family" do
-        family_params = attributes_for(
-          :family,
-          last_name: nil,
-          capability: "2",
-        )
+    context  "when invalid params" do
+      it "doesn't create a new family" do
+        expect {
+          post :create, params: { family: { first_name: "John" } }
+        }.not_to change(Family, :count)
+      end
 
-        expect do
-          post :create, params: { family: family_params }
-        end.to change(Family, :count).by(0)
+      it "sets an alert message" do
+        post :create, params: { family: { first_name: "John" } }
+
+        expect( flash[:alert] ).
+          to match(
+            I18n.t("flash.actions.create.alert", resource_name: "Family")
+          )
+      end
+
+      it "renders the form to add a new family again" do
+        post :create, params: { family: { first_name: "John" } }
+
+        expect(response).to render_template("new")
       end
     end
   end
