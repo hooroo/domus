@@ -1,9 +1,20 @@
 it:
   application:
     show:
-      title: "Domus"
-
+      title: "Famiglie"
   families:
     new:
       title: "Aggiungi una famiglia"
+      first_name: "Name"
+      last_name: "Cognome"
+      address: "Indirizzo"
+      animals: "Animali"
+      capability: "Capacita'"
+      prof: "Prof"
+      bus_driver: "Autisti"
+      active: "Attiva"
+      preferred_gender: "Sesso Preferito"
       submit: "Aggiungi"
+    index:
+      title: "Famiglie"
+      link: "Aggiungi Famiglia

@@ -1,0 +1,12 @@
+it:
+  flash:
+     actions:
+       create:
+         notice: "%{resource_name} e' stata creata con successo."
+         alert: "%{resource_name} non e' stata creata correttamente."
+       update:
+         notice: "%{resource_name} e' stata modificata con successo."
+         alert: "%{resource_name} non e' stato possibile modificarla."
+       destroy:
+         notice: "%{resource_name} e' stata eliminata con successo."
+         alert: "%{resource_name} non e' stato possibile eliminarla."
