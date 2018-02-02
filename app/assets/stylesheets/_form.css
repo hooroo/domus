@@ -1,0 +1,47 @@
+p {
+  font-size: 2em;
+  text-align: center;
+}
+
+.simple_form {
+  width: 40%;
+  border: 2px solid black;
+  padding: 30px;
+  margin: 0 auto;
+  background-color: #B0C4DE;
+  font-size: 1.5em;
+}
+
+input.string {
+  border: 1px solid grey;
+  width: 100%;
+  padding: 10px;
+}
+
+label {
+  display: inherit;
+  margin-top: 15px;
+}
+
+.input.radio_buttons {
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 20%;
+  font-size: 1em;
+}
+
+input[type=radio] {
+  transform: scale(1.5);
+  margin-left: 1em;
+}
+
+span.radio {
+}
+
+span.error {
+  color: red;
+}
