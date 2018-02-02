@@ -5,9 +5,9 @@
   <%= f.input :address %>
   <%= f.input :animals %>
   <%= f.input :capability %>
-  <%= f.input :prof, as: :radio_buttons, collection: ["Y", "N"] %>
-  <%= f.input :preferred_gender, as: :radio_buttons, collection: ["F", "M"] %>
-  <%= f.input :bus_driver, as: :radio_buttons, collection: ["Y", "N"] %>
-  <%= f.input :active, as: :radio_buttons, collection: ["Y", "N"] %>
+  <%= f.input :prof, as: :radio_buttons %>
+  <%= f.input :preferred_gender, as: :radio_buttons, collection: ["Female", "Male"] %>
+  <%= f.input :bus_driver, as: :radio_buttons %>
+  <%= f.input :active, as: :radio_buttons %>
   <%= f.submit t(".submit") %>
 <% end %>
