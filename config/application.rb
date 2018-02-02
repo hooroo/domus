@@ -28,7 +28,7 @@ module Domus
       generate.routing_specs false
       generate.stylesheets false
       generate.test_framework :rspec
-      generate.view_specs false
+      generate.view_specs true
     end
   end
 end

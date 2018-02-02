@@ -78,10 +78,14 @@ SimpleForm.setup do |config|
 
   # CSS class to add for error notification helper.
 <<<<<<< HEAD
+<<<<<<< HEAD
   config.error_notification_class = "error_notification"
 =======
   config.error_notification_class = 'error_notification'
 >>>>>>> 4689bfd... Add simple form gem and flash messages to rend it
+=======
+  config.error_notification_class = "error_notification"
+>>>>>>> a3cc05c... Rubocop fixes
 
   # ID to add for error notification helper.
   # config.error_notification_id = nil
@@ -153,7 +157,7 @@ SimpleForm.setup do |config|
   # When false, do not use translations for labels.
   # config.translate_labels = true
 
-  # Automatically discover new inputs in Rails' autoload path.
+  # Automatically discover new inputs in Rails" autoload path.
   # config.inputs_discovery = true
 
   # Cache SimpleForm inputs discovery
