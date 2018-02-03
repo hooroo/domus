@@ -1,3 +1,5 @@
-<a href="families/new"><%= t ".link" %></a>
 <p><%= t ".title" %></p>
-<%= render @families %>
+    <%= render "families_table_header" %>
+    <%= render @families %>
+  </div>
+  <a href="families/new"><%= t ".link" %></a>
