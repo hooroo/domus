@@ -1,5 +1,4 @@
-
-input[type="submit"] {
+.button, input[type="submit"] {
   padding: 8px 16px;
   border: none;
   background: #333;
@@ -7,4 +6,11 @@ input[type="submit"] {
   text-transform: uppercase;
   letter-spacing: .09em;
   border-radius: 2px;
+  font-size: 15px;
+}
+
+.link_button{
+  appearance: button;
+  text-decoration: none;
+  display: inline-block;
 }
