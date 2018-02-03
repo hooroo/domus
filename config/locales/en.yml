@@ -18,3 +18,13 @@ en:
     index:
       title: "Families"
       link: "Add a Family"
+      first_name: "First Name"
+      last_name: "Last Name"
+      address: "Address"
+      animals: "Animals"
+      capability: "Capability"
+      prof: "Prof"
+      bus_driver: "Bus Driver"
+      active: "Active"
+      preferred_gender: "Proferred Gender"
+      submit: "Add"
