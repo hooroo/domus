@@ -30,7 +30,18 @@ RSpec.describe FamiliesController do
     it "destroys that family" do
       family = create(:family)
 
-      expect { delete "/families/#{family.id}" }.to change(Family, :count).by(-1)
+      expect { delete :destroy, params: { id: family.id } }.to change(Family, :count).by(-1)
+    end
+
+    it "flashes a notice message and render the family list" do
+      family = create(:family)
+      delete :destroy, params: { id: family.id }
+
+      expect(flash[:notice])
+        .to match(
+          I18n.t("flash.actions.destroy.notice", resource_name: "Family")
+        )
+      expect(response).to redirect_to families_path
     end
   end
 end

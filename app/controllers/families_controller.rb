@@ -19,6 +19,7 @@ class FamiliesController < ApplicationController
 
   def destroy
     @family = Family.find(params[:id]).delete
+    redirect_to families_path
   end
 
   private
