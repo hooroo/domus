@@ -17,6 +17,10 @@ class FamiliesController < ApplicationController
     respond_with @family, location: -> { families_path }
   end
 
+  def destroy
+    @family = Family.find(params[:id]).delete
+  end
+
   private
 
   def family_params

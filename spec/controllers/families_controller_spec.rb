@@ -25,4 +25,12 @@ RSpec.describe FamiliesController do
       end
     end
   end
+
+  describe "DELETE /families/:id" do
+    it "destroys that family" do
+      family = create(:family)
+
+      expect { delete "/families/#{family.id}" }.to change(Family, :count).by(-1)
+    end
+  end
 end
