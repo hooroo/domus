@@ -1,13 +1,13 @@
 <div class="table">
   <div class="tr th">
-      <div class="td"><%= t ".application.families.show.last_name" %></div>
-      <div class="td"><%= t ".application.families.show.first_name" %></div>
-      <div class="td"><%= t ".application.families.show.address" %></div>
-      <div class="td"><%= t ".application.families.show.capability" %></div>
-      <div class="td"><%= t ".application.families.show.preferred_gender" %></div>
-      <div class="td"><%= t ".application.families.show.prof" %></div>
-      <div class="td"><%= t ".application.families.show.bus_driver" %></div>
-      <div class="td"><%= t ".application.families.show.animals" %></div>
-      <div class="td"><%= t ".application.families.show.active" %></div>
+      <div class="td"><%= Family.human_attribute_name(:last_name) %></div>
+      <div class="td"><%= Family.human_attribute_name(:first_name) %></div>
+      <div class="td"><%= Family.human_attribute_name(:address) %></div>
+      <div class="td"><%= Family.human_attribute_name(:capability) %></div>
+      <div class="td"><%= Family.human_attribute_name(:preferred_gender) %></div>
+      <div class="td"><%= Family.human_attribute_name(:prof) %></div>
+      <div class="td"><%= Family.human_attribute_name(:bus_driver) %></div>
+      <div class="td"><%= Family.human_attribute_name(:animals) %></div>
+      <div class="td"><%= Family.human_attribute_name(:active) %></div>
     </div>
   </div>
