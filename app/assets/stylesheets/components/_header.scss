@@ -1,15 +1,25 @@
 @import "patterns/_colors";
 
-.header{
+.header {
   @include header-style;
-  width:100%;
-  height:50px;
-  border: 1px solid #d0d0d0;
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  justify-items: center;
-  align-items: center;
+  max-width: 95%;
+  height: 50px;
+  margin: 0 auto;
 }
-.header-item span{
-  height: 20px;
+
+.header ul {
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+.header ul li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
 }
