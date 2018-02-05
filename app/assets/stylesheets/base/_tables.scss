@@ -1,22 +1,23 @@
+@import "patterns/_borders";
+
 .table {
+  @include border-bottom-style;
   display: flex;
   flex-flow: column nowrap;
-  font-size: .8rem;
-  margin: 0.5rem;
+  font-size: .8em;
+  margin: 0.5em;
   line-height: 1.5;
-  border-bottom: 1px solid #d0d0d0;
   flex: 1 1 auto;
 }
 
 .th {
-  display: none;
   font-weight: 700;
-  background-color: #f2f2f2;
 }
 
 .th > .td {
   white-space: normal;
   justify-content: center;
+  align-items: center;
 }
 
 .tr {
@@ -25,15 +26,8 @@
   flex-flow: row nowrap;
 }
 
-.tr:nth-of-type(even) {
-  background-color: #f2f2f2;
-}
-
-.tr:nth-of-type(odd) {
-  background-color: #ffffff;
-}
-
 .td {
+  @include border-bottom-style;
   display: flex;
   flex-flow: row nowrap;
   flex-grow: 1;
@@ -44,5 +38,4 @@
   text-overflow: ellipsis;
   min-width: 0px;
   white-space: nowrap;
-  border-bottom: 1px solid #d0d0d0;
 }

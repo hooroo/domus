@@ -1,11 +1,14 @@
+@import "patterns/_colors";
+@import "patterns/_borders";
+
 .container * {
   box-sizing: border-box;
   font-size: 20px;
 }
 
 .simple_form {
-  background-color: #dce0f2;
-  border: 1px solid grey;
+  @include form-style;
+  @include border-style;
   list-style-type: none;
   margin: 0 auto;
   max-width: 800px;

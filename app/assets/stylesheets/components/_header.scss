@@ -1,13 +1,15 @@
+@import "patterns/_colors";
+
 .header{
-    width:100%;
-    height:50px;
-    background-color: #e6ffe6;
-    border: 1px solid black;
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    justify-items: center;
-    align-items: center;
+  @include header-style;
+  width:100%;
+  height:50px;
+  border: 1px solid #d0d0d0;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  justify-items: center;
+  align-items: center;
 }
 .header-item span{
-    height: 20px;
+  height: 20px;
 }
