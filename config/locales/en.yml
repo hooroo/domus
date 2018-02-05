@@ -16,6 +16,10 @@ en:
       preferred_gender: "Proferred Gender"
       submit: "Add"
     index:
+      home: "Home Page"
+      families: "Families List"
+      groups: "Groups List"
+      create_list: "Create a List"
       title: "Families"
       link: "Add a Family"
       first_name: "First Name"

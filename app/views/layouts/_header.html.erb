@@ -1,16 +1,16 @@
 <nav class="header">
   <ul class="main-nav">
     <li>
-      <a><%= link_to "Home page", root_path %></a>
+      <a><%= link_to t("families.index.home"), root_path %></a>
     </li>
     <li>
-      <a><%= link_to "Families List", families_path %></a>
+      <a><%= link_to t("families.index.families"), families_path %></a>
     </li>
     <li>
-      <a><%= link_to "Groups List" %></a>
+      <a><%= link_to t("families.index.groups") %></a>
     </li>
     <li>
-      <%= link_to "Create a List" %>
+      <%= link_to t("families.index.create_list") %>
     </li>
   </ul>
 </nav>
