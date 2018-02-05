@@ -27,14 +27,14 @@ RSpec.describe FamiliesController do
   end
 
   describe "DELETE /families/:id" do
-    context "When the family id exsist" do
-      it "destroys that family" do
+    context "When family exsist" do
+      it "destroys the family" do
         family = create(:family)
 
         expect { delete :destroy, params: { id: family.id } }.to change(Family, :count).by(-1)
       end
 
-      it "flashes a notice message and render the family list" do
+      it "sets a flash notice message and redirects to index" do
         family = create(:family)
 
         delete :destroy, params: { id: family.id }
@@ -45,10 +45,13 @@ RSpec.describe FamiliesController do
         )
         expect(response).to redirect_to families_path
       end
+    end
 
-      context "When the family id doesn't exist" do
-        it "flashes an alert message and render the family list" do
-        end
+    context "When family does not exist" do
+      it "raises record not found error" do
+        expect do
+          delete :destroy, params: { id: 3 }
+        end.to raise_error(ActiveRecord::RecordNotFound)
       end
     end
   end
