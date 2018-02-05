@@ -15,7 +15,7 @@ Layout/IndentationConsistency:
 Metrics/MethodLength:
   Exclude:
     - "app/controllers/families_controller.rb"
-    - "db/**/*"  
+    - "db/**/*"
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*"
@@ -55,6 +55,8 @@ Style/NumericLiterals:
     - "db/*"
 Style/OneLineConditional:
   Enabled: false
+Style/SymbolArray:
+  Enabled: false  
 Style/StderrPuts:
   Exclude:
     - "bin/*"
