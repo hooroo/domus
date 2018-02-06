@@ -13,9 +13,9 @@ Layout/EmptyLineBetweenDefs:
 Layout/IndentationConsistency:
   Enabled: true
 Metrics/MethodLength:
+  Max: 11
   Exclude:
-    - "app/controllers/families_controller.rb"
-    - "db/**/*"  
+    - "db/**/*"
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*"
@@ -54,6 +54,8 @@ Style/NumericLiterals:
   Exclude:
     - "db/*"
 Style/OneLineConditional:
+  Enabled: false
+Style/SymbolArray:
   Enabled: false
 Style/StderrPuts:
   Exclude:

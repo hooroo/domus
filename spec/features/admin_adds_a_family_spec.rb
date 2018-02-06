@@ -11,6 +11,7 @@ feature "Admin adds a family" do
     expect(page).to have_text(
       I18n.t("flash.actions.create.notice", resource_name: "Family")
     )
+    expect(page).to have_text "Scaramella"
     expect(current_path).to eq families_path
   end
 end
