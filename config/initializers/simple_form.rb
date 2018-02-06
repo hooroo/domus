@@ -77,15 +77,7 @@ SimpleForm.setup do |config|
   config.error_notification_tag = :div
 
   # CSS class to add for error notification helper.
-<<<<<<< HEAD
-<<<<<<< HEAD
   config.error_notification_class = "error_notification"
-=======
-  config.error_notification_class = 'error_notification'
->>>>>>> 4689bfd... Add simple form gem and flash messages to rend it
-=======
-  config.error_notification_class = "error_notification"
->>>>>>> a3cc05c... Rubocop fixes
 
   # ID to add for error notification helper.
   # config.error_notification_id = nil
