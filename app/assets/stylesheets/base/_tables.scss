@@ -1,4 +1,4 @@
-.table {
+table {
   display: flex;
   flex-flow: column nowrap;
   font-size: .8em;
@@ -7,32 +7,26 @@
   flex: 1 1 auto;
 }
 
-.th {
+th {
   font-weight: 700;
 }
 
-.th > .td {
+th > td {
   align-items: center;
   justify-content: center;
   white-space: normal;
 }
 
-.tr {
-  display: flex;
-  flex-flow: row nowrap;
+tr {
   width: 100%;
 }
 
-.td {
-  display: flex;
-  flex-flow: row nowrap;
-  flex-grow: 1;
-  flex-basis: 0;
+td {
   justify-content: center;
   min-width: 0px;
   overflow: hidden;
   padding: 0.5em;
   text-overflow: ellipsis;
   word-break: break-word;
-  white-space: nowrap;  
+  white-space: nowrap;
 }
