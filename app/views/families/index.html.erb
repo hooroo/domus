@@ -1,4 +1,4 @@
 <p class="title"><%= t(".title") %></p>
-    <%= render "families_table_header" %>
-    <%= render @families %>
-<a class="link_button button", href="families/new"><%= t(".link") %></a>
+<%= render "families_table_header" %>
+<%= render @families %>
+<%= link_to t(".link"), new_family_path, class: "link_button, button" %>
