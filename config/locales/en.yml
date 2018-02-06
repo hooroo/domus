@@ -1,36 +1,31 @@
 en:
-  application:
-    show:
-      title: "Families"
+  activerecord:
+    models:
+      family: Family
+    attributes:
+      family:
+        first_name: "First Name"
+        last_name: "Last Name"
+        address: "Address"
+        animals: "Animals"
+        capability: "Capability"
+        prof: "Prof"
+        bus_driver: "Bus Driver"
+        active: "Active"
+        preferred_gender: "Preferred Gender"
+        f: "Female"
+        m: "Male"
   families:
+    index:
+      title: "Families"
+      add_family: "Add a Family"
+      submit: "Add"
     new:
       title: "Add a family"
-      first_name: "First Name"
-      last_name: "Last Name"
-      address: "Address"
-      animals: "Animals"
-      capability: "Capability"
-      prof: "Prof"
-      bus_driver: "Bus Driver"
-      active: "Active"
-      preferred_gender: "Proferred Gender"
-      f: "Female"
-      m: "Male"
       submit: "Add"
-    index:
-      home: "Home Page"
-      families: "Families List"
-      groups: "Groups List"
+  header:
+    links:
+      home: Home Page
+      families: Families List
+      groups: Groups List
       create_list: "Create a List"
-      title: "Families"
-      link: "Add a Family"
-      first_name: "First Name"
-      last_name: "Last Name"
-      address: "Address"
-      animals: "Animals"
-      capability: "Capability"
-      prof: "Prof"
-      bus_driver: "Bus Driver"
-      active: "Active"
-      preferred_gender: "Proferred Gender"
-      submit: "Add"
