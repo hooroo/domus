@@ -13,9 +13,9 @@ Layout/EmptyLineBetweenDefs:
 Layout/IndentationConsistency:
   Enabled: true
 Metrics/MethodLength:
+  Max: 11
   Exclude:
-    - "app/controllers/families_controller.rb"
-    - "db/**/*"  
+    - "db/**/*"
 Metrics/BlockLength:
   Exclude:
     - "spec/**/*"
@@ -61,4 +61,5 @@ Style/StderrPuts:
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 Style/TrailingCommaInLiteral:
-  EnforcedStyleForMultiline: consistent_comma
+  EnforcedStyleForMultiline: comma
+  Enabled: true
