@@ -56,11 +56,14 @@ Style/NumericLiterals:
 Style/OneLineConditional:
   Enabled: false
 Style/SymbolArray:
-  Enabled: false
+  EnforcedStyle: brackets
 Style/StderrPuts:
   Exclude:
     - "bin/*"
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
 Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: consistent_comma
+  Enabled: true
