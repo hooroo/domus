@@ -1,13 +1,12 @@
-@import "_colors";
-
 .button, input[type="submit"] {
-  @include button-style;
-  padding: 8px 16px;
+  background: $dark-grey;
   border: none;
-  text-transform: uppercase;
-  letter-spacing: .009em;
   border-radius: 2px;
+  color: $offwhite;
   font-size: 15px;
+  letter-spacing: 0.009em;
+  padding: 8px 16px;
+  text-transform: uppercase;
 }
 
 .link_button{

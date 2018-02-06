@@ -1,14 +1,11 @@
-@import "patterns/_colors";
-@import "patterns/_borders";
-
 .container * {
   box-sizing: border-box;
   font-size: 20px;
 }
 
 .simple_form {
-  @include form-style;
-  @include border-style;
+  background-color: $light-blue;
+  border: $border;
   list-style-type: none;
   margin: 0 auto;
   max-width: 800px;

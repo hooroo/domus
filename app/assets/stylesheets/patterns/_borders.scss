@@ -1,9 +1,0 @@
-@mixin border-style {
-  $border: 1px solid #d0d0d0 !global;
-  border: $border;
-}
-
-@mixin border-bottom-style {
-  $border-bottom: 1px solid #d0d0d0 !global;
-  border-bottom: $border-bottom;
-}

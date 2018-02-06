@@ -1,7 +1,4 @@
-@import "patterns/_borders";
-
 .table {
-  @include border-bottom-style;
   display: flex;
   flex-flow: column nowrap;
   font-size: .8em;
@@ -15,28 +12,27 @@
 }
 
 .th > .td {
-  white-space: normal;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  white-space: normal;
 }
 
 .tr {
-  width: 100%;
   display: flex;
   flex-flow: row nowrap;
+  width: 100%;
 }
 
 .td {
-  @include border-bottom-style;
   display: flex;
   flex-flow: row nowrap;
   flex-grow: 1;
   flex-basis: 0;
-  padding: 0.5em;
-  word-break: break-word;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  min-width: 0px;
-  white-space: nowrap;
   justify-content: center;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0.5em;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  white-space: nowrap;  
 }

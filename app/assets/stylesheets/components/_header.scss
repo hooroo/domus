@@ -1,25 +1,20 @@
-@import "patterns/_colors";
-
 .header {
-  @include header-style;
-  max-width: 95%;
+  background: $blue;
   height: 50px;
   margin: 0 auto;
+  max-width: 95%;
 }
 
 .header ul {
   display: flex;
-  position: relative;
   height: 100%;
+  position: relative;
 }
+
 .header ul li {
-  flex: 1;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
   list-style: none;
-}
-a {
-  text-decoration: none;
-  color: black;
 }
