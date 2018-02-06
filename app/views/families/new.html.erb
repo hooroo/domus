@@ -1,7 +1,7 @@
 <p class="title"><%= t(".title") %></p>
 <div class="container">
   <%= simple_form_for @family do |f| %>
-    <%= f.input :first_name, wrapper_html: { class: "sub_container" }, wrapper_html: { class: "sub_container" } %>
+    <%= f.input :first_name, wrapper_html: { class: "sub_container" } %>
     <%= f.input :last_name, wrapper_html: { class: "sub_container" } %>
     <%= f.input :address, wrapper_html: { class: "sub_container" } %>
     <%= f.input :animals, wrapper_html: { class: "sub_container" } %>
