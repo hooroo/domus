@@ -25,14 +25,4 @@ RSpec.describe FamiliesController do
       end
     end
   end
-
-  describe "GET /families/:id" do
-    it "returns the show family" do
-      family = create(:family)
-
-      get :show, params: { id: family.id }
-
-      expect(response).to render_template("show")
-    end
-  end
 end
