@@ -15,6 +15,12 @@ en:
         preferred_gender: "Preferred Gender"
         f: "Female"
         m: "Male"
+  header:
+    links:
+      home: Home Page
+      families: Families List
+      groups: Groups List
+      create_list: "Create a List"
   families:
     index:
       title: "Families"
@@ -23,9 +29,3 @@ en:
     new:
       title: "Add a family"
       submit: "Add"
-    header:
-      links:
-        home: Home Page
-        families: Families List
-        groups: Groups List
-        create_list: "Create a List"
