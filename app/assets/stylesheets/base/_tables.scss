@@ -1,32 +1,27 @@
 table {
-  display: flex;
-  flex-flow: column nowrap;
-  font-size: .8em;
-  margin: 0.5em;
-  line-height: 1.5;
-  flex: 1 1 auto;
+  border-collapse: collapse;
+  margin: 20px auto;
+  width: 85%;
+}
+
+td, th {
+  border: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 th {
-  font-weight: 700;
-}
-
-th > td {
-  align-items: center;
-  justify-content: center;
-  white-space: normal;
-}
-
-tr {
-  width: 100%;
+  border-bottom: $border;
 }
 
 td {
-  justify-content: center;
-  min-width: 0px;
-  overflow: hidden;
-  padding: 0.5em;
-  text-overflow: ellipsis;
-  word-break: break-word;
-  white-space: nowrap;
+  border-bottom: $border;
+  padding-top: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: $light-grey;
 }
