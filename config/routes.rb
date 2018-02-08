@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :families, only: %i[index new create]
+  resources :families, only: [:index, :show, :new, :create]
 
   root "families#index"
 end

@@ -55,11 +55,15 @@ Style/NumericLiterals:
     - "db/*"
 Style/OneLineConditional:
   Enabled: false
+Style/SymbolArray:
+  EnforcedStyle: brackets
 Style/StderrPuts:
   Exclude:
     - "bin/*"
 Style/StringLiterals:
   EnforcedStyle: double_quotes
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: consistent_comma
 Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
   Enabled: true
