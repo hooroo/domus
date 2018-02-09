@@ -1,0 +1,11 @@
+<div class="container">
+  <%= simple_form_for @group do |f| %>
+    <%= f.input :name %>
+    <%= f.input :responsable_name %>
+    <%= f.input :responsable_contact %>
+    <%= f.input :from_date, order: [:day, :month, :year] %>
+    <%= f.input :to_date, order: [:day, :month, :year] %>
+    <%= f.input :notes %>
+    <%= f.submit %>
+  <% end %>
+</div>
