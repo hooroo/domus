@@ -18,3 +18,11 @@ en:
         active: "Active"
         preferred_gender: "Proferred Gender"
         submit: "Add"
+      group:
+        name: name
+        responsable_name: responsable name
+        responsable_contact: responsable contact
+        from_date: from
+        to_date: to
+        notes: notes
+        submit: Add
