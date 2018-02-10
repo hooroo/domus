@@ -1,8 +1,8 @@
 en:
   activerecord:
     models:
-      family: Family
-      group: Group
+      family: "Family"
+      group: "Group"
     attributes:
       family:
         first_name: "First Name"
@@ -17,12 +17,12 @@ en:
         f: "Female"
         m: "Male"
       group:
-        name: name
-        responsable_name: responsable name
-        responsable_contact: responsable contact
-        from_date: from
-        to_date: to
-        notes: notes
+        name: "name"
+        responsable_name: "responsable name"
+        responsable_contact: "responsable contact"
+        from_date: "from"
+        to_date: "to"
+        notes: "notes"
   header:
     links:
       home: "Home Page"
