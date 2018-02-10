@@ -1,0 +1,13 @@
+<p class="title"><%= t(".title") %></p>
+<table>
+  <tr>
+    <th><%= Group.human_attribute_name(:name)%></th>
+    <th><%= Group.human_attribute_name(:responsable_name)%></th>
+    <th><%= Group.human_attribute_name(:responsable_contact)%></th>
+    <th><%= Group.human_attribute_name(:from_date)%></th>
+    <th><%= Group.human_attribute_name(:to_date)%></th>
+    <th><%= Group.human_attribute_name(:notes)%></th>
+  </tr>
+  <%= render @groups %>
+</table>
+<%= link_to t(".add_group"), new_group_path, class: "link_button, button" %>

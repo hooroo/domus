@@ -55,3 +55,6 @@ en:
       title: "Add a new group"
     form:
       submit: "Add"
+    index:
+      title: "Groups List"
+      add_group: "Add a new group"
