@@ -20,8 +20,8 @@ en:
         name: "name"
         responsable_name: "responsable name"
         responsable_contact: "responsable contact"
-        from_date: "from"
-        to_date: "to"
+        start_date: "from"
+        end_date: "to"
         notes: "notes"
   header:
     links:
@@ -53,8 +53,8 @@ en:
   groups:
     new:
       title: "Add a new group"
-      from_date_in_the_past_error: "from date can not be in the past!"
-      from_date_after_to_date_error: "to date must be after from date!"
+      start_date_in_the_past_error: "from date can not be in the past!"
+      start_date_after_end_date_error: "to date must be after from date!"
     form:
       submit: "Create Group"
     index:

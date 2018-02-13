@@ -22,7 +22,7 @@ en:
         name: name
         responsable_name: responsable name
         responsable_contact: responsable contact
-        from_date: from
-        to_date: to
+        start_date: from
+        end_date: to
         notes: notes
         submit: Add

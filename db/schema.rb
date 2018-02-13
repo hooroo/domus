@@ -11,6 +11,8 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20180209004916) do
+
+  # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "families", force: :cascade do |t|
@@ -31,10 +33,11 @@ ActiveRecord::Schema.define(version: 20180209004916) do
     t.string "name", null: false
     t.string "responsable_name", null: false
     t.string "responsable_contact", null: false
-    t.date "from_date", null: false
-    t.date "to_date", null: false
+    t.date "start_date", null: false
+    t.date "end_date", null: false
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 end

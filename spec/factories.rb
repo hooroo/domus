@@ -8,7 +8,7 @@ FactoryBot.define do
      name "St. Luis"
      responsable_name "Miss Faget"
      responsable_contact "123-456-789"
-     from_date "1.month"
-     to_date "1.month + 5"
+     start_date "1.month"
+     end_date "1.month + 5"
   end
 end

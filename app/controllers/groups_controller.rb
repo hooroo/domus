@@ -20,8 +20,8 @@ class GroupsController < ApplicationController
       :name,
       :responsable_name,
       :responsable_contact,
-      :from_date,
-      :to_date,
+      :start_date,
+      :end_date,
       :notes,
     )
   end
