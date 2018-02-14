@@ -13,12 +13,9 @@ td, th {
   word-wrap: break-word;
 }
 
-th {
-  border-bottom: $border;
-}
-
 td {
   border-bottom: $border;
+  border-top: $border;
   padding-top: 15px;
 }
 
