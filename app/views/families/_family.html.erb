@@ -8,4 +8,6 @@
   <td><%= family.bus_driver %></td>
   <td><%= family.animals %></td>
   <td><%= family.active %></td>
+  <td><%= link_to t("families.index.destroy"), family_path(family), method: :delete, class: "list-button" %></td>
+  <td><%= link_to t("families.index.edit"), family_path(family), class: "list-button" %></td>
 </tr>

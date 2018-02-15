@@ -17,17 +17,19 @@ en:
         m: "Male"
   header:
     links:
-      home: Home Page
-      families: Families List
-      groups: Groups List
+      home: "Home Page"
+      families: "Families List"
+      groups: "Groups List"
       create_list: "Create a List"
   families:
     index:
       title: "Families"
       add_family: "Add a Family"
       submit: "Add"
+      destroy: "Delete"
+      edit: "Edit"
     new:
       title: "Add a family"
       submit: "Add"
     show:
-      title: Family details  
+      title: "Family details"

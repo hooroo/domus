@@ -9,8 +9,18 @@
   text-transform: uppercase;
 }
 
-.link_button{
+.link-button{
   appearance: button;
-  text-decoration: none;
   display: inline-block;
+  text-decoration: none;
+}
+
+td .list-button{
+  background: $light-green;
+  border-radius: 2px;
+  color: $dark-grey;
+  display: block;
+  font-size: 12px;
+  padding: 5px 10px;
+  text-transform: uppercase;
 }
