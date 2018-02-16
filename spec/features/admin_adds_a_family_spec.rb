@@ -6,7 +6,7 @@ feature "Admin adds a family" do
 
     fill_in "family_last_name", with: "Scaramella"
     fill_in "family_capability", with: 2
-    click_on I18n.t("families.new.submit")
+    click_on I18n.t("families.form.submit")
 
     expect(page).to have_text(
       I18n.t("flash.actions.create.notice", resource_name: "Family")
