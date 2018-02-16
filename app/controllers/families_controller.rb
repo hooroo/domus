@@ -18,11 +18,26 @@ class FamiliesController < ApplicationController
   end
 
   def destroy
-    @family = Family.find(params[:id]).delete
-    
+    family.delete
+
     respond_with @family, location: -> { families_path }
   end
 
+  def edit
+  end
+
+  def update
+    family.update_attributes(family_params)
+
+    respond_with @family, location: -> { families_path }
+  end
+
+  def destroy
+    family.delete
+
+    respond_with @family, location: -> { families_path }
+  end
+  
   private
 
   def family_params
@@ -38,4 +53,9 @@ class FamiliesController < ApplicationController
       :active,
     )
   end
+
+  def family
+    @family ||= Family.find(params[:id])
+  end
+  helper_method :family
 end

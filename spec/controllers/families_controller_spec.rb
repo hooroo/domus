@@ -31,18 +31,18 @@ RSpec.describe FamiliesController do
       it "destroys the family" do
         family = create(:family)
 
-        expect { delete :destroy, params: { id: family.id } }.to change(Family, :count).by(-1)
+        expect do
+          delete :destroy, params: { id: family.id }
+        end .to change(Family, :count).by(-1)
       end
 
       it "sets a flash notice message and redirects to index" do
         family = create(:family)
+        notice = I18n.t("flash.actions.destroy.notice", resource_name: "Family")
 
         delete :destroy, params: { id: family.id }
 
-        expect(flash[:notice])
-        .to match(
-          I18n.t("flash.actions.destroy.notice", resource_name: "Family")
-        )
+        expect(flash[:notice]).to match(notice)
         expect(response).to redirect_to families_path
       end
     end
@@ -51,6 +51,16 @@ RSpec.describe FamiliesController do
       it "raises record not found error" do
         expect do
           delete :destroy, params: { id: 3 }
+        end.to raise_error(ActiveRecord::RecordNotFound)
+      end
+    end
+  end
+
+  describe "PUT /families/:id" do
+    context "When family does not exist" do
+      it "raises a record not found error" do
+        expect do
+          put :update, params: { id: 3, family: { last_name: "Dark Blue" } }
         end.to raise_error(ActiveRecord::RecordNotFound)
       end
     end

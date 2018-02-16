@@ -22,14 +22,29 @@ en:
       groups: "Groups List"
       create_list: "Create a List"
   families:
+    new:
+      title: "Add a family"
+      first_name: "First Name"
+      last_name: "Last Name"
+      address: "Address"
+      animals: "Animals"
+      capability: "Capability"
+      prof: "Prof"
+      bus_driver: "Bus Driver"
+      active: "Active"
+      preferred_gender: "Proferred Gender"
     index:
       title: "Families"
       add_family: "Add a Family"
       submit: "Add"
-      destroy: "Delete"
-      edit: "Edit"
     new:
       title: "Add a family"
       submit: "Add"
     show:
-      title: "Family details"
+      title: Family details
+    edit:
+      title: "Update family details"
+    form:
+      submit: "Submit"
+
+
