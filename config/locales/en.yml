@@ -17,9 +17,9 @@ en:
         m: "Male"
   header:
     links:
-      home: Home Page
-      families: Families List
-      groups: Groups List
+      home: "Home Page"
+      families: "Families List"
+      groups: "Groups List"
       create_list: "Create a List"
   families:
     new:
@@ -46,3 +46,5 @@ en:
       title: "Update family details"
     form:
       submit: "Submit"
+
+
