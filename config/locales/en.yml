@@ -37,8 +37,6 @@ en:
       title: "Families"
       add_family: "Add a Family"
       submit: "Add"
-      destroy: "Delete"
-      edit: "Edit"
     new:
       title: "Add a family"
       submit: "Add"
