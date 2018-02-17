@@ -22,6 +22,12 @@ class GroupsController < ApplicationController
     respond_with @group, location: -> { groups_path }
   end
 
+  def destroy
+    group.delete
+
+    respond_with @group, location: -> { groups_path }
+  end
+
   private
 
   def group_params

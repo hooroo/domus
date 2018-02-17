@@ -44,4 +44,34 @@ RSpec.describe GroupsController do
       end
     end
   end
+
+  describe "DELETE /groups/:id" do
+    context "When group exsist" do
+      it "destroys the group" do
+        group = create(:group)
+
+        expect do
+          delete :destroy, params: { id: group.id }
+        end .to change(Group, :count).by(-1)
+      end
+
+      it "sets a flash notice message and redirects to index" do
+        group = create(:group)
+        notice = I18n.t("flash.actions.destroy.notice", resource_name: "Group")
+
+        delete :destroy, params: { id: group.id }
+
+        expect(flash[:notice]).to match(notice)
+        expect(response).to redirect_to groups_path
+      end
+    end
+
+    context "When group does not exist" do
+      it "raises record not found error" do
+        expect do
+          delete :destroy, params: { id: 3 }
+        end.to raise_error(ActiveRecord::RecordNotFound)
+      end
+    end
+  end
 end
