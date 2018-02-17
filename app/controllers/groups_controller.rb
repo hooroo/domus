@@ -13,6 +13,15 @@ class GroupsController < ApplicationController
     respond_with @group, location: -> { groups_path }
   end
 
+  def edit
+  end
+
+  def update
+    group.update_attributes(group_params)
+
+    respond_with @group, location: -> { groups_path }
+  end
+
   private
 
   def group_params
@@ -25,4 +34,9 @@ class GroupsController < ApplicationController
       :notes,
     )
   end
+
+  def group
+    @group ||= Group.find(params[:id])
+  end
+  helper_method :group
 end

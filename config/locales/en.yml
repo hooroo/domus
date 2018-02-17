@@ -52,8 +52,10 @@ en:
       title: "Add a new group"
       start_date_in_the_past_error: "from date can not be in the past!"
       start_date_after_end_date_error: "to date must be after from date!"
-    form:
-      submit: "Create Group"
     index:
       title: "Groups List"
       add_group: "Add a new group"
+    edit:
+      title: "Edit Group"
+    form:
+      submit: "Submit"

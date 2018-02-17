@@ -24,4 +24,24 @@ RSpec.describe GroupsController do
       end
     end
   end
+
+  describe "PUT /groups/:id" do
+    context "when invalid params" do
+      it "does not update the group" do
+        group = create(:group, name: "St Patrick")
+
+        put :update, params: { id: group.id, group: { name: ""} }
+
+        expect(group.name).to eq "St Patrick"
+      end
+    end
+
+    context "When group does not exist" do
+      it "raises a record not found error" do
+        expect do
+          put :update, params: { id: 3, group: { name: "Mr Black" } }
+        end.to raise_error(ActiveRecord::RecordNotFound)
+      end
+    end
+  end
 end
