@@ -6,25 +6,29 @@ class Group < ApplicationRecord
     :end_date,
     presence: true
 
+  validates :responsable_contact,
+    :numericality => true,
+    :length => { :minimum => 9, :maximum => 10 }
+
   validate :start_date_in_the_past
   validate :start_date_after_end_date
 
   private
 
   def start_date_after_end_date
-    if start_date.present? && end_date.present? && (end_date <= start_date)
+    if start_date && end_date && (end_date <= start_date)
       errors.add(
         :start_date,
-        I18n.t(".groups.new.start_date_after_end_date_error"),
+        I18n.t("activerecord.errors.models.group.start_date_after_end_date_error"),
       )
     end
   end
 
   def start_date_in_the_past
-    if start_date.present? && start_date < Date.today
+    if start_date && start_date < Date.today
       errors.add(
         :start_date,
-        I18n.t(".groups.new.start_date_in_the_past_error"),
+        I18n.t("activerecord.errors.models.group.start_date_in_the_past_error"),
       )
     end
   end

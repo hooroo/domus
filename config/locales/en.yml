@@ -42,19 +42,19 @@ en:
       title: "Add a family"
       submit: "Add"
     show:
-      title: Family details
+      title: "Family details"
     edit:
       title: "Update family details"
     form:
       submit: "Submit"
   groups:
     new:
-      title: "Add a new group"
+      title: "Add a group"
       start_date_in_the_past_error: "from date can not be in the past!"
       start_date_after_end_date_error: "to date must be after from date!"
     index:
       title: "Groups List"
-      add_group: "Add a new group"
+      add_group: "Add a group"
     edit:
       title: "Edit Group"
     form:

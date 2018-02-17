@@ -16,4 +16,20 @@ describe Group do
       expect(group).not_to be_valid
     end
   end
+
+  context "when start_date is after end_date" do
+    it "is not valid" do
+      group = build(:group, start_date: 1.month.ago, end_date: 2.month.ago)
+
+      expect(group).not_to be_valid
+    end
+  end
+
+  context "when the responsable_contact is too short" do
+    it "is not valid" do
+      group = build(:group, responsable_contact: "123")
+
+      expect(group).not_to be_valid
+    end
+  end
 end

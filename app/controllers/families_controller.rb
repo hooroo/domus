@@ -17,12 +17,6 @@ class FamiliesController < ApplicationController
     respond_with @family, location: -> { families_path }
   end
 
-  def destroy
-    family.delete
-
-    respond_with @family, location: -> { families_path }
-  end
-
   def edit
   end
 
@@ -37,7 +31,7 @@ class FamiliesController < ApplicationController
 
     respond_with @family, location: -> { families_path }
   end
-  
+
   private
 
   def family_params

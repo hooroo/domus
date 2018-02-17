@@ -9,7 +9,7 @@ feature "Admin adds a group" do
 
     fill_in Group.human_attribute_name(:name), with: "St. Peter"
     fill_in Group.human_attribute_name(:responsable_name), with: "Mr. Black"
-    fill_in Group.human_attribute_name(:responsable_contact), with: "0045-12344"
+    fill_in "group_responsable_contact", with: "0123456789"
     select start_date.day, from: "group_start_date_3i"
     select start_date.strftime("%B"), from: "group_start_date_2i"
     select start_date.year, from: "group_start_date_1i"
