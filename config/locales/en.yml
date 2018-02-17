@@ -36,6 +36,8 @@ en:
       destroy: "Destroy"
       edit: "Update"
       submit: "Add"
+      destroy: "Delete"
+      edit: "Edit"
     new:
       title: "Add a family"
       submit: "Add"

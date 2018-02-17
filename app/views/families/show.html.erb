@@ -1,2 +1,5 @@
-<h1><%= t(".title") %></h1>
-<%= @family.last_name %>
+<p class="title"><%= t(".title") %></p>
+<table>
+  <%= render "families_table_header" %>
+  <%= render @family %>
+</table>
