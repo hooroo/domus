@@ -1,0 +1,13 @@
+<div class="container">
+  <%= simple_form_for @trip do |f| %>
+    <%= f.input :total_girls %>
+    <%= f.input :total_boys %>
+    <%= f.input :total_teachers %>
+    <%= f.input :total_bus_drivers %>
+    <%= f.input :start_date, order: [:day, :month, :year] %>
+    <%= f.input :end_date, order: [:day, :month, :year], selected: 5.days.from_now %>
+    <%= f.label :group %>
+    <%= f.collection_select :group_id, Group.all, :id, :name, include_blank: "" %>
+    <%= f.submit t(".submit") %>
+  <% end %>
+</div>

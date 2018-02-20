@@ -19,7 +19,7 @@ feature "Admin adds a group" do
     click_on I18n.t("groups.form.submit")
 
     expect(page).to have_text(
-      I18n.t("flash.actions.create.notice", resource_name: "Group")
+      I18n.t("flash.actions.create.notice", resource_name: "Group"),
     )
     expect(current_path).to eq groups_path
   end

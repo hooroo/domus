@@ -1,13 +1,18 @@
 en:
+  date:
+    formats:
+      default: "%d-%m-%Y"
+      short: "%b %d"
+      long: "%B %d, %Y"
   activerecord:
     models:
       family: "Family"
       group: "Group"
     errors:
       models:
-        group:
-          start_date_in_the_past_error: "Start date can not be in the past!"
-          start_date_after_end_date_error: "End date must be after start date!"
+        trip:
+          start_date_in_the_past: "Start date can not be in the past!"
+          start_date_after_end_date: "Start date must be before end date!"
     attributes:
       family:
         first_name: "First Name"
@@ -28,6 +33,14 @@ en:
         start_date: "from"
         end_date: "to"
         notes: "notes"
+      trip:
+        total_girls: "Number of Girls"
+        total_boys: "Number of Boys"
+        total_teachers: "Number of Teachers"
+        total_bus_drivers: "Number of Bus Drivers"
+        start_date: "From"
+        end_date: "To"
+        group_name: "Group's Name"
   header:
     links:
       home: "Home Page"
@@ -62,3 +75,11 @@ en:
       title: "Edit Group"
     form:
       submit: "Submit"
+  trips:
+    form:
+      submit: "Add"
+    new:
+      title: "Create a trip"
+    index:
+      title: "Trips List"
+      add_trip: "Add"

@@ -1,0 +1,6 @@
+<p class="title"><%= t(".title") %></p>
+<table>
+  <%= render "trips_table_header" %>
+  <%= render @trips %>
+</table>
+<%= link_to t(".add_trip"), new_trip_path, class: "link_button, button" %>

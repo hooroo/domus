@@ -2,6 +2,7 @@ AllCops:
   Exclude:
     - "Gemfile.lock"
     - "spec/spec_helper.rb"
+    - "Guardfile"
 EndOfLine:
   Enabled: false
 Layout/AlignParameters:

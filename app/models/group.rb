@@ -1,14 +1,13 @@
 class Group < ApplicationRecord
+  has_many :trips
+
   validates :name,
     :responsable_name,
-    :responsable_contact,
     :start_date,
     :end_date,
     presence: true
 
-  validates :responsable_contact,
-    :numericality => true,
-    :length => { :minimum => 9, :maximum => 10 }
+  validates :responsable_contact, length: { minimum: 9 }, presence: true
 
   validate :start_date_in_the_past
   validate :start_date_after_end_date
@@ -19,7 +18,9 @@ class Group < ApplicationRecord
     if start_date && end_date && (end_date <= start_date)
       errors.add(
         :start_date,
-        I18n.t("activerecord.errors.models.group.start_date_after_end_date_error"),
+        I18n.t(
+          "activerecord.errors.models.group.start_date_after_end_date",
+        ),
       )
     end
   end
@@ -28,7 +29,9 @@ class Group < ApplicationRecord
     if start_date && start_date < Date.today
       errors.add(
         :start_date,
-        I18n.t("activerecord.errors.models.group.start_date_in_the_past_error"),
+        I18n.t(
+          "activerecord.errors.models.group.start_date_in_the_past",
+        ),
       )
     end
   end

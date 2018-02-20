@@ -13,7 +13,7 @@ RSpec.describe GroupsController do
         post :create, params: { group: { name: "St. Paul" } }
 
         expect(flash[:alert]).to match(
-          I18n.t("flash.actions.create.alert", resource_name: "Group")
+          I18n.t("flash.actions.create.alert", resource_name: "Group"),
         )
       end
 

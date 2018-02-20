@@ -14,7 +14,7 @@ RSpec.describe FamiliesController do
 
         expect(flash[:alert])
           .to match(
-            I18n.t("flash.actions.create.alert", resource_name: "Family")
+            I18n.t("flash.actions.create.alert", resource_name: "Family"),
           )
       end
 
@@ -33,7 +33,7 @@ RSpec.describe FamiliesController do
 
         expect do
           delete :destroy, params: { id: family.id }
-        end .to change(Family, :count).by(-1)
+        end.to change(Family, :count).by(-1)
       end
 
       it "sets a flash notice message and redirects to index" do

@@ -10,7 +10,7 @@ feature "Admin updates a family" do
     click_on I18n.t("families.form.submit")
 
     expect(page).to have_text(
-      I18n.t("flash.actions.update.notice", resource_name: "Family")
+      I18n.t("flash.actions.update.notice", resource_name: "Family"),
     )
     expect(page).to have_text "New Last Name"
   end
