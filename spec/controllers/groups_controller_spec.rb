@@ -30,7 +30,7 @@ RSpec.describe GroupsController do
       it "does not update the group" do
         group = create(:group, name: "St Patrick")
 
-        put :update, params: { id: group.id, group: { name: ""} }
+        put :update, params: { id: group.id, group: { name: "" } }
 
         expect(group.name).to eq "St Patrick"
       end

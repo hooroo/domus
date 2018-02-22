@@ -31,7 +31,7 @@ describe Group do
 
   context "when the responsable_contact is too short" do
     it "is not valid" do
-      group = build(:group, responsable_contact: "123")
+      group = build(:group, responsable_contact: 123)
 
       expect(group).not_to be_valid
     end

@@ -7,7 +7,7 @@ FactoryBot.define do
   factory :group do
     name "Cegli Messapica"
     responsable_name "Maria"
-    responsable_contact "339 7308986"
+    responsable_contact "3397308986"
     start_date 1.month.from_now
     end_date 2.months.from_now
   end

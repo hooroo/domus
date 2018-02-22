@@ -11,7 +11,7 @@ class Trip < ApplicationRecord
     :end_date,
     presence: true
 
-    delegate :name, to: :group, prefix: true
+  delegate :name, to: :group, prefix: true
 
   private
 

@@ -7,7 +7,10 @@ class Group < ApplicationRecord
     :end_date,
     presence: true
 
-  validates :responsable_contact, length: { minimum: 9 }, presence: true
+  validates :responsable_contact,
+    presence: true,
+    numericality: true,
+    length: { minimum: 9, maximum: 10 }
 
   validate :start_date_in_the_past
   validate :start_date_after_end_date
