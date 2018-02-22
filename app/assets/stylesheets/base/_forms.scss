@@ -31,3 +31,8 @@ label + * {
 span.error {
   color: red;
 }
+
+#trip_end_date_3i,
+#trip_start_date_3i {
+  max-width: fit-content;
+}
