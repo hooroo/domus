@@ -4,12 +4,10 @@ FactoryBot.define do
     capability { [2, 3, 4, 5].sample }
   end
 
-  factory :group do
+  factory :school do
     name "Cegli Messapica"
     responsable_name "Maria"
     responsable_contact "3397308986"
-    start_date 1.month.from_now
-    end_date 2.months.from_now
   end
 
   factory :trip do
@@ -19,6 +17,6 @@ FactoryBot.define do
     total_bus_drivers { [0, 1, 2].sample }
     start_date 1.month.from_now
     end_date 2.months.from_now
-    group
+    school
   end
 end

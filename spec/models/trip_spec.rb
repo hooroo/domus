@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe Trip do
   describe "associations" do
-    it { is_expected.to belong_to(:group) }
+    it { is_expected.to belong_to(:school) }
   end
 
   describe "validations" do
@@ -15,7 +15,7 @@ describe Trip do
   end
 
   describe "delegators" do
-    it { is_expected.to delegate_method(:name).to(:group).with_prefix }
+    it { is_expected.to delegate_method(:name).to(:school).with_prefix }
   end
 
   context "when start_date is in the past" do

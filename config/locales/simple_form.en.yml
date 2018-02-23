@@ -18,11 +18,9 @@ en:
         active: "Active"
         preferred_gender: "Proferred Gender"
         submit: "Add"
-      group:
+      school:
         name: name
         responsable_name: responsable name
         responsable_contact: responsable contact
-        start_date: from
-        end_date: to
         notes: notes
         submit: Add

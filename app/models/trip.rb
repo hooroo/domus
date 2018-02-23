@@ -1,5 +1,5 @@
 class Trip < ApplicationRecord
-  belongs_to :group
+  belongs_to :school
 
   validate :start_date_in_the_past
   validate :start_date_after_end_date
@@ -11,7 +11,7 @@ class Trip < ApplicationRecord
     :end_date,
     presence: true
 
-  delegate :name, to: :group, prefix: true
+  delegate :name, to: :school, prefix: true
 
   private
 

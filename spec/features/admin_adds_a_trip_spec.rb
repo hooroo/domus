@@ -2,7 +2,7 @@ require "rails_helper"
 
 feature "Admin adds a trip" do
   scenario "successfully" do
-    group = create(:group)
+    school = create(:school)
     start_date = 5.days.from_now
     end_date = 10.days.from_now
 
@@ -12,7 +12,7 @@ feature "Admin adds a trip" do
     fill_in "trip_total_boys", with: 15
     fill_in "trip_total_teachers", with: 3
     fill_in "trip_total_bus_drivers", with: 2
-    select group.name, from: "trip_group_id"
+    select school.name, from: "trip_school_id"
     select start_date.day, from: "trip_start_date_3i"
     select start_date.strftime("%B"), from: "trip_start_date_2i"
     select start_date.year, from: "trip_start_date_1i"

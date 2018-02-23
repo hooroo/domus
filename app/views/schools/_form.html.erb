@@ -1,10 +1,8 @@
 <div class="container">
-  <%= simple_form_for group do |f| %>
+  <%= simple_form_for school do |f| %>
     <%= f.input :name %>
     <%= f.input :responsable_name %>
     <%= f.input :responsable_contact %>
-    <%= f.input :start_date, order: [:day, :month, :year] %>
-    <%= f.input :end_date, order: [:day, :month, :year] %>
     <%= f.input :notes %>
     <%= f.submit t(".submit")%>
   <% end %>

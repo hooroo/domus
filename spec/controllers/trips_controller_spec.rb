@@ -6,7 +6,7 @@ RSpec.describe TripsController do
       it "does not create a new trip" do
         expect do
           post :create, params: { trip: { total_girls: "five" } }
-        end.not_to change(Group, :count)
+        end.not_to change(School, :count)
       end
 
       it "sets an alert message" do
@@ -18,7 +18,7 @@ RSpec.describe TripsController do
       end
 
       it "shows the form again" do
-        post :create, params: { trip: { total_girls: "Sfive" } }
+        post :create, params: { trip: { total_girls: "five" } }
 
         expect(response).to render_template("new")
       end

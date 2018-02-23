@@ -5,7 +5,7 @@ if Rails.env.development?
       include FactoryBot::Syntax::Methods
 
       Family.delete_all
-      Group.delete_all
+      School.delete_all
       Trip.delete_all
 
       create_list(
@@ -19,7 +19,7 @@ if Rails.env.development?
       )
 
       create_list(
-        :group,
+        :school,
         5,
         name: FFaker::AddressFR.city,
         responsable_name: FFaker::NameFR.name,
@@ -27,8 +27,8 @@ if Rails.env.development?
         notes: FFaker::Lorem.phrase,
       )
 
-      Group.all.each do |group|
-        create(:trip, group: group)
+      School.all.each do |school|
+        create(:trip, school: school)
       end
     end
   end

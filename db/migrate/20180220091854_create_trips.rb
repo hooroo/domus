@@ -1,7 +1,7 @@
 class CreateTrips < ActiveRecord::Migration[5.1]
   def change
     create_table :trips do |t|
-      t.bigint "group_id"
+      t.bigint "school_id"
       t.integer "total_girls", null: false
       t.integer "total_boys", null: false
       t.integer "total_teachers", null: false
@@ -10,7 +10,7 @@ class CreateTrips < ActiveRecord::Migration[5.1]
       t.date "end_date", null: false
       t.datetime "created_at", null: false
       t.datetime "updated_at", null: false
-      t.index ["group_id"], name: "index_trips_on_group_id"
+      t.index ["school_id"], name: "index_trips_on_school_id"
       t.timestamps
     end
   end

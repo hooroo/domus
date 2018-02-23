@@ -28,19 +28,17 @@ ActiveRecord::Schema.define(version: 20180220091854) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "groups", force: :cascade do |t|
+  create_table "schools", force: :cascade do |t|
     t.string "name", null: false
     t.string "responsable_name", null: false
     t.string "responsable_contact", null: false
-    t.date "start_date", null: false
-    t.date "end_date", null: false
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "trips", force: :cascade do |t|
-    t.bigint "group_id"
+    t.bigint "school_id"
     t.integer "total_girls", null: false
     t.integer "total_boys", null: false
     t.integer "total_teachers", null: false
@@ -49,6 +47,6 @@ ActiveRecord::Schema.define(version: 20180220091854) do
     t.date "end_date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["group_id"], name: "index_trips_on_group_id"
+    t.index ["school_id"], name: "index_trips_on_school_id"
   end
 end
