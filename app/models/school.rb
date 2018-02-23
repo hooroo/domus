@@ -7,5 +7,5 @@ class School < ApplicationRecord
 
   validates :responsable_contact,
     presence: true,
-    length: { minimum: 9, maximum: 10 }
+    length: { minimum: 9 }
 end
