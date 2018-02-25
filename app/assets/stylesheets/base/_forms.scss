@@ -8,7 +8,7 @@
   border: $border;
   list-style-type: none;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 30%;
   padding: 10px;
 }
 
@@ -24,10 +24,6 @@ label {
   max-width: 220px;
 }
 
-label + * {
-  flex: 1 0 220px;
-}
-
 span.error {
   color: red;
 }
@@ -35,4 +31,9 @@ span.error {
 #trip_end_date_3i,
 #trip_start_date_3i {
   max-width: fit-content;
+}
+
+.numeric {
+  border-radius: 10%;
+  max-width: 70px;
 }

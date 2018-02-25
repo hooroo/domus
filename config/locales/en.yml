@@ -42,9 +42,9 @@ en:
   header:
     links:
       home: "Home Page"
-      families: "Families List"
-      schools: "Schools List"
-      create_list: "Create a List"
+      families: "Families"
+      schools: "Schools"
+      trips: "Trips"
   families:
     index:
       title: "Families"
@@ -65,9 +65,9 @@ en:
       submit: "Submit"
   schools:
     new:
-      title: "Add a new school"
+      title: "Add a school"
     index:
-      title: "Schools List"
+      title: "Schools"
       add_school: "Add a school"
       destroy: "Delete"
       edit: "Edit"
@@ -88,3 +88,5 @@ en:
     edit:
       title: "Edit trip"
       destroy: "delete"
+      title: "Trips"
+      add_trip: "Add a trip"
