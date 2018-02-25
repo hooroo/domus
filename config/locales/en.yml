@@ -77,9 +77,12 @@ en:
       submit: "Submit"
   trips:
     form:
-      submit: "Add"
+      submit: "Submit"
     new:
       title: "Create a trip"
     index:
       title: "Trips List"
       add_trip: "Add"
+      edit: "Edit"
+    edit:
+      title: "Edit trip"

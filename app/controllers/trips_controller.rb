@@ -13,9 +13,23 @@ class TripsController < ApplicationController
     respond_with @trip, location: -> { trips_path }
   end
 
+  def edit
+  end
+
+  def update
+    trip.update_attributes(trip_params)
+
+    respond_with @trip, location: -> { trips_path }
+  end
+
   private
 
   def trip_params
     params.require(:trip).permit!
   end
+
+  def trip
+    @trip ||= Trip.find(params[:id])
+  end
+  helper_method :trip
 end

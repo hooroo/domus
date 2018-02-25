@@ -24,4 +24,24 @@ RSpec.describe TripsController do
       end
     end
   end
+
+  describe "PUT /trips/:id" do
+    context "when invalid params" do
+      it "does not update the trip" do
+        trip = create(:trip, total_girls: 15)
+
+        put :update, params: { id: trip.id, trip: { total_girls: "seventeen" } }
+
+        expect(trip.total_girls).to eq 15
+      end
+    end
+
+    context "When trip does not exist" do
+      it "raises a record not found error" do
+        expect do
+          put :update, params: { id: 3, trip: { total_girls: 20 } }
+        end.to raise_error(ActiveRecord::RecordNotFound)
+      end
+    end
+  end
 end

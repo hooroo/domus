@@ -6,4 +6,5 @@
   <td><%= l(trip.start_date) %></td>
   <td><%= l(trip.end_date) %></td>
   <td><%= trip.school_name %></td>
+  <td><%= link_to t("trips.index.edit"), edit_trip_path(trip), class: "list-button" %></td>
 </tr>

@@ -1,10 +1,10 @@
 <div class="container">
-  <%= simple_form_for @trip do |f| %>
+  <%= simple_form_for trip do |f| %>
     <%= f.input :total_girls %>
     <%= f.input :total_boys %>
     <%= f.input :total_teachers %>
     <%= f.input :total_bus_drivers %>
-    <%= f.input :start_date, order: [:day, :month, :year] %>
+    <%= f.input :start_date, order: [:day, :month, :year], selected: 1.day.from_now %>
     <%= f.input :end_date, order: [:day, :month, :year], selected: 5.days.from_now %>
     <%= f.label :school %>
     <%= f.collection_select :school_id, School.all, :id, :name, include_blank: "" %>
