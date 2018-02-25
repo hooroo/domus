@@ -18,6 +18,12 @@ class TripsController < ApplicationController
 
   def update
     trip.update_attributes(trip_params)
+    
+    respond_with @trip, location: -> { trips_path }
+  end
+
+  def destroy
+    trip.delete
 
     respond_with @trip, location: -> { trips_path }
   end

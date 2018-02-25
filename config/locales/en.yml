@@ -84,5 +84,7 @@ en:
       title: "Trips List"
       add_trip: "Add"
       edit: "Edit"
+      destroy: "Delete"
     edit:
       title: "Edit trip"
+      destroy: "delete"

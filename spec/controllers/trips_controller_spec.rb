@@ -44,4 +44,33 @@ RSpec.describe TripsController do
       end
     end
   end
+
+  describe "DELETE /trips/:id" do
+    context "When trip exsist" do
+      it "destroys the trip" do
+        trip = create(:trip)
+
+        expect do
+          delete :destroy, params: { id: trip.id }
+        end.to change(Trip, :count).by(-1)
+      end
+
+      it "sets a flash notice message" do
+        trip = create(:trip)
+        notice = I18n.t("flash.actions.destroy.notice", resource_name: "Trip")
+
+        delete :destroy, params: { id: trip.id }
+
+        expect(flash[:notice]).to match(notice)
+      end
+
+      it "redirects to index" do
+        trip = create(:trip)
+
+        delete :destroy, params: { id: trip.id }
+
+        expect(response).to redirect_to trips_path
+      end
+    end
+  end
 end
