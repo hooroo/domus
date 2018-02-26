@@ -13,6 +13,10 @@ class Trip < ApplicationRecord
 
   delegate :name, to: :school, prefix: true
 
+  scope :current, -> { where("end_date > ?", Time.current) }
+  scope :past, -> { where("end_date <= ?", Time.current) }
+  scope :by_start_date, -> { order("start_date") }
+
   private
 
   def start_date_after_end_date

@@ -80,13 +80,15 @@ en:
       submit: "Submit"
     new:
       title: "Create a trip"
+    edit:
+      title: "Edit trip"
     index:
-      title: "Trips List"
       add_trip: "Add"
       edit: "Edit"
       destroy: "Delete"
-    edit:
-      title: "Edit trip"
-      destroy: "delete"
-      title: "Trips"
-      add_trip: "Add a trip"
+      current_trips_title: "Current Trips List"
+      past_trips_title: "Past Trips List"
+      all_trips_title: "All Trips List"
+      current_trips: "Current Trips"
+      past_trips: "Past Trips"
+      all_trips: "All Trips"

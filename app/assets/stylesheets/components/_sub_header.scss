@@ -1,0 +1,35 @@
+.sub-header {
+  height: 50px;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+.sub-header ul {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.sub-header li {
+  align-items: center;
+  background: $water-green;
+  border: 1px solid $dark-green;
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  list-style: none;
+  margin: 10px;
+}
+
+#current_trip{
+  display: block;
+}
+
+#past_trips {
+  display: none;
+}
+
+#all_trips {
+  display: none;
+}

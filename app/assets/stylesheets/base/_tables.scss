@@ -23,6 +23,12 @@ tr:nth-child(even) {
   background-color: $light-grey;
 }
 
+.trips_table_index {
+  border: 3px solid $light-grey;
+  max-width: 90%;
+  margin: 30px auto;
+}
+
 .homepage{
   margin-top: 15%;
   width: 25%;
