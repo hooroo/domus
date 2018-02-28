@@ -1,6 +1,6 @@
 class TripsController < ApplicationController
   def index
-    @trips = Trip.all
+    @trips = Trip.limit(10)
     @current_trips = Trip.current.by_start_date
     @past_trips = Trip.past
   end
@@ -13,6 +13,9 @@ class TripsController < ApplicationController
     @trip = Trip.create(trip_params)
 
     respond_with @trip, location: -> { trips_path }
+  end
+
+  def show
   end
 
   def edit

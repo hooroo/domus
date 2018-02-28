@@ -1,5 +1,8 @@
 class Family < ApplicationRecord
-  validates_presence_of :last_name, :capability
+  has_many :trip_families
+  has_many :trips, through: :trip_families
+
+  validates :last_name, :capability, presence: true
 
   def self.by_last_name
     order("lower(last_name)")
@@ -11,5 +14,13 @@ class Family < ApplicationRecord
 
   def self.inactive
     where(active: false)
+  end
+
+  def to_s
+    last_name
+  end
+
+  def summary
+    "#{last_name} (#{capability})"
   end
 end

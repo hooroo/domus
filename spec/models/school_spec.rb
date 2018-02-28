@@ -18,4 +18,12 @@ describe School do
       expect(school).not_to be_valid
     end
   end
+
+  describe "#to_s" do
+    it "uses the name" do
+      school = School.new(name: "St. Paul")
+
+      expect(school.to_s).to eq "St. Paul"
+    end
+  end
 end

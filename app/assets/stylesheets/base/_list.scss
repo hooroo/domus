@@ -1,0 +1,24 @@
+.list {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+
+  li {
+    border-top: $border;
+    padding: 10px;
+    list-style: none;
+    width: 250px;
+  }
+
+  li:nth-child(even) {
+    background: $light-grey;
+  }
+
+  li:last-child {
+    border-bottom: $border;
+  }
+
+  ul {
+    font-size: $header-table-size;
+  }
+}

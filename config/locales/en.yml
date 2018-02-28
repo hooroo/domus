@@ -13,6 +13,9 @@ en:
         trip:
           start_date_in_the_past: "Start date can not be in the past!"
           start_date_after_end_date: "Start date must be before end date!"
+        trip_family:
+          trip_capability: "Check how many resources still to allocate!"
+          capability_exceeded: "The capability for this family is not enough!"
     attributes:
       family:
         first_name: "First Name"
@@ -66,6 +69,8 @@ en:
       title: "Update family details"
     form:
       submit: "Submit"
+      f: "F"
+      m: "M"
   active_families:
     index:
       title: "Active families"
@@ -99,9 +104,20 @@ en:
       add_trip: "Add a Trip"
       edit: "Edit"
       destroy: "Delete"
+      show: "Show"
       current_trips_title: "Current Trips List"
       past_trips_title: "Past Trips List"
       all_trips_title: "All Trips List"
       current_trips: "Current Trips"
       past_trips: "Past Trips"
       all_trips: "All Trips"
+    show:
+      title: "Trip Details"
+      add_families: "Add Family"
+  trip_families:
+    form:
+      submit: "Add a family"
+    new:
+      title: "Allocate a family to the trip"
+      table_title: "Still to allocate"
+      associate_families: "Add Family"

@@ -1,0 +1,21 @@
+<h1>
+  <%= t(".title") %>: <%= trip.name %>
+</h1>
+
+<table class="list-table">
+  <%= render "trips_table_header" %>
+  <%= render "trip" %>
+</table>
+
+<h2><%= t(".allocated_families") %></h2>
+<ul class="list">
+  <% trip.trip_families.each do |trip_family| -%>
+    <li class="list">
+      <%= trip_family.family %>:
+      <%= trip_family.total_girls %> F -
+      <%= trip_family.total_boys %> M -
+      <%= trip_family.total_techers %> T -
+      <%= trip_family.total_bus_drivers %> B
+    </li>
+  <% end %>
+</ul>

@@ -33,4 +33,20 @@ describe Family do
       expect(Family.inactive).to eq [inactive_family]
     end
   end
+
+  describe "#to_s" do
+    it "uses the last_name" do
+      family = Family.new(last_name: "Martini")
+
+      expect(family.to_s).to eq "Martini"
+    end
+  end
+
+  describe "#summary" do
+    it "returns last_name and capability" do
+      family = Family.new(last_name: "Rossi", capability: 2)
+
+      expect(family.summary).to eq "Rossi (2)"
+    end
+  end
 end

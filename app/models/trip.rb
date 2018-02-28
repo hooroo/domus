@@ -1,21 +1,37 @@
 class Trip < ApplicationRecord
   belongs_to :school
+  has_many :trip_families
+  has_many :families, through: :trip_families
 
   validate :start_date_in_the_past
   validate :start_date_after_end_date
-  validates :total_girls,
-    :total_boys,
-    :total_teachers,
-    :total_bus_drivers,
-    :start_date,
+  validates(
     :end_date,
-    presence: true
+    :start_date,
+    :total_boys,
+    :total_bus_drivers,
+    :total_girls,
+    :total_teachers,
+    presence: true,
+  )
 
   delegate :name, to: :school, prefix: true
 
-  scope :current, -> { where("end_date > ?", Time.current) }
-  scope :past, -> { where("end_date <= ?", Time.current) }
-  scope :by_start_date, -> { order("start_date") }
+  def self.current(limit=10)
+    where("end_date > ?", Time.current).limit(limit)
+  end
+
+  def self.past(limit=10)
+    where("end_date <= ?", Time.current).limit(limit)
+  end
+
+  def self.by_start_date
+    order(:start_date)
+  end
+
+  def name
+    [school_name, start_date].join("-")
+  end
 
   private
 

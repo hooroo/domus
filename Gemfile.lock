@@ -155,6 +155,8 @@ GEM
     nio4r (2.2.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
+    normalize-scss (7.0.1)
+      sass (~> 3.3)
     notiffany (0.1.1)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -309,6 +311,7 @@ DEPENDENCIES
   kaminari
   launchy
   listen (>= 3.0.5, < 3.2)
+  normalize-scss
   pg (~> 0.21)
   pry-byebug
   puma (~> 3.7)

@@ -17,4 +17,14 @@
     method: :delete,
     class: "list-button" %>
   </td>
+  <td>
+    <%= link_to t("trips.show.add_families"),
+    new_trip_trip_family_path(trip),
+    class: "list-button" %>
+  </td>
+  <td>
+    <%= link_to t("trips.index.show"),
+    trip_path([trip]),
+    class: "list-button" %>
+  </td>
 </tr>

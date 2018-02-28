@@ -1,25 +1,9 @@
 <div class="container">
   <%= simple_form_for school do |f| %>
-  <ul>
-    <li>
-      <%= f.label School.human_attribute_name(:name) %>
-      <%= f.input_field :name %>
-    </li>
-    <li>
-      <%= f.label School.human_attribute_name(:responsible_name) %>
-      <%= f.input_field :responsible_name %>
-    </li>
-    <li>
-      <%= f.label School.human_attribute_name(:responsible_contact) %>
-      <%= f.input_field :responsible_contact %>
-    </li>
-    <li>
-      <%= f.label School.human_attribute_name(:notes) %>
-      <%= f.input_field :notes %>
-    </li>
-    <li>
+      <%= f.input :name %>
+      <%= f.input :responsible_name %>
+      <%= f.input :responsible_contact %>
+      <%= f.input :notes %>
       <%= f.submit t(".submit")%>
-    </li>
-  </ul>
   <% end %>
 </div>

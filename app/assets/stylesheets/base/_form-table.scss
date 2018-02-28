@@ -1,58 +1,43 @@
-.simple_form * {
-  box-sizing: border-box;
-  font-size: $form-size;
-  list-style-type: none;
-  text-transform: uppercase;
-}
-
-.new_trip ul {
-  width: 550px;
-}
-
 .container {
   background-color: $pale-pink;
-  border-collapse: separate;
-  border-spacing: 10px;
-  border-style: double;
-  margin: 0 auto;
-  max-width: fit-content;
-}
-
-.simple_form input, textarea {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 15px;
+  border: 2px solid darken($pale-pink, 10);
+  margin: 0 250px;
   padding: 10px;
 }
 
-.simple_form li input[type=submit] {
-  margin-right: 15px;
-}
+.simple_form  {
+  label, input, textarea, select {
+    font-size: 1.5em;
+  }
 
-.simple_form input[type=radio] {
-  margin: 5px 15px 5px 5px;
-}
+  .input {
+    display: inline-block;
+    margin: 15px;
+  }
 
-.simple_form label {
-  color: white;
-  flex: 1 0 120px;
-  max-width: 220px;
-}
+  input[type=submit] {
+    display: block;
+    margin: 0;
+  }
 
-.simple_form li {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 15px;
+  input[type=radio] {
+    margin: 5px 15px 5px 5px;
+  }
+
+  label {
+    display: inline-block;
+    float: left;
+    width: 220px;
+    margin-right: 20px;
+  }
+
+  .numeric {
+    border-radius: 10%;
+    max-width: 70px;
+  }
 }
 
 span.error {
   color: red;
   padding-left: 10px;
-}
-
-.numeric {
-  border-radius: 10%;
-  max-width: 70px;
 }

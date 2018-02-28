@@ -1,0 +1,10 @@
+<div class="container">
+  <%= simple_form_for([trip, @trip_family]) do |f| %>
+    <%= f.input :total_girls %>
+    <%= f.input :total_boys %>
+    <%= f.input :total_techers %>
+    <%= f.input :total_bus_drivers %>
+    <%= f.association :family, label_method: :summary, include_blank: true %>
+    <%= f.submit t(".submit") %>
+  <% end %>
+</div>

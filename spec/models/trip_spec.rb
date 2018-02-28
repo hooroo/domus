@@ -18,6 +18,16 @@ describe Trip do
     it { is_expected.to delegate_method(:name).to(:school).with_prefix }
   end
 
+  describe "#name" do
+    it "uses the name and start_date" do
+      timestamp = 1.month.from_now
+      school = create(:school, name: "St. Paul")
+      trip = Trip.new(school_id: school.id, start_date: timestamp)
+
+      expect(trip.name).to eq "St. Paul-#{timestamp.to_date}"
+    end
+  end
+
   context "when start_date is in the past" do
     it "is return the correct error" do
       error_message = I18n.t(
