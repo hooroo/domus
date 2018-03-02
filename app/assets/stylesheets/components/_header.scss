@@ -1,8 +1,10 @@
 .header {
-  background: $blue;
+  background: $pale-green;
+  font-size: $header-font-size;
   height: 50px;
   margin: 0 auto;
   max-width: 95%;
+  text-transform: uppercase;
 }
 
 .header ul {

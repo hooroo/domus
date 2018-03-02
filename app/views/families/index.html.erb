@@ -1,6 +1,6 @@
 <p class="title"><%= t(".title") %></p>
-<%= link_to t(".add_family"), new_family_path(locale: I18n.locale), class: "link_button, button" %>
-<table>
+<%= link_to t(".add_family"), new_family_path, class: "link_button, button" %>
+<table class="list-table">
   <%= render "families_table_header" %>
   <%= render @families %>
 </table>

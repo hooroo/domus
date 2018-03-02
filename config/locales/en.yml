@@ -24,18 +24,16 @@ en:
         bus_driver: "Bus Driver"
         active: "Active"
         preferred_gender: "Preferred Gender"
-        f: "Female"
-        m: "Male"
       school:
-        name: "name"
-        responsable_name: "responsable name"
-        responsable_contact: "responsable contact"
-        notes: "notes"
+        name: "Name"
+        responsable_name: "Responsable name"
+        responsable_contact: "Responsable contact"
+        notes: "Notes"
       trip:
-        total_girls: "Number of Girls"
-        total_boys: "Number of Boys"
-        total_teachers: "Number of Teachers"
-        total_bus_drivers: "Number of Bus Drivers"
+        total_girls: "Girls"
+        total_boys: "Boys"
+        total_teachers: "Teachers"
+        total_bus_drivers: "Bus Drivers"
         start_date: "From"
         end_date: "To"
         school_name: "School's Name"
@@ -66,6 +64,7 @@ en:
   schools:
     new:
       title: "Add a school"
+      name: "Name"
     index:
       title: "Schools"
       add_school: "Add a school"
@@ -83,7 +82,7 @@ en:
     edit:
       title: "Edit trip"
     index:
-      add_trip: "Add"
+      add_trip: "Add a Trip"
       edit: "Edit"
       destroy: "Delete"
       current_trips_title: "Current Trips List"

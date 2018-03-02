@@ -1,14 +1,45 @@
 <div class="container">
   <%= simple_form_for family do |f| %>
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
-    <%= f.input :address %>
-    <%= f.input :animals %>
-    <%= f.input :capability %>
-    <%= f.input :prof, as: :radio_buttons %>
-    <%= f.input :preferred_gender, as: :radio_buttons, collection: ["Female", "Male"] %>
-    <%= f.input :bus_driver, as: :radio_buttons %>
-    <%= f.input :active, as: :radio_buttons %>
-    <%= f.submit t(".submit") %>
+  <ul>
+    <li>
+      <%= f.label Family.human_attribute_name(:first_name) %>
+      <%= f.input_field :first_name %>
+    </li>
+    <li>
+      <%= f.label Family.human_attribute_name(:last_name) %>
+      <%= f.input_field :last_name %>
+    </li>
+    <li>
+      <%= f.label Family.human_attribute_name(:address) %>
+      <%= f.input_field :address %>
+    </li>
+    <li>
+      <%= f.label Family.human_attribute_name(:animals) %>
+      <%= f.input_field :animals %>
+    </li>
+    <li>
+      <%= f.label Family.human_attribute_name(:capability) %>
+      <%= f.input_field :capability %>
+    </li>
+    <li>
+      <%= f.label Family.human_attribute_name(:prof) %>
+      <%= f.input_field :prof, as: :radio_buttons, collection: ["Y", "N"] %>
+    </li>
+    <li>
+      <%= f.label Family.human_attribute_name(:preferred_gender) %>
+      <%= f.input_field :preferred_gender, as: :radio_buttons, collection: ["F", "M"] %>
+    </li>
+    <li>
+      <%= f.label Family.human_attribute_name(:bus_driver) %>
+      <%= f.input_field :bus_driver, as: :radio_buttons, collection: ["Y", "N"] %>
+    </li>
+    <li>
+      <%= f.label Family.human_attribute_name(:active) %>
+      <%= f.input_field :active, as: :radio_buttons, collection: ["Y", "N"] %>
+    </li>
+    <li>
+      <%= f.submit t(".submit") %>
+    </li>
+  </ul>
   <% end %>
 </div>

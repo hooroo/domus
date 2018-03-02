@@ -1,0 +1,22 @@
+.list-table td, th {
+  border: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.list-table td {
+  border-bottom: $border;
+  border-top: $border;
+  padding-top: 15px;
+}
+
+.list-table tr:nth-child(even) {
+  background-color: $light-grey;
+}
+
+.list-table, th {
+  font-size: $header-table-size;
+}

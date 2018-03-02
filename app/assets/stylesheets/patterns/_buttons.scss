@@ -1,29 +1,22 @@
-.button, input[type="submit"] {
-  background: $dark-grey;
-  border: none;
+.button, input[type="submit"],
+.list-button {
+  background: $pale-prune;
   border-radius: 2px;
   color: $offwhite;
-  display: block;
   font-size: 15px;
-  letter-spacing: 0.009em;
-  margin-left: 2%;
-  padding: 8px 16px;
-  text-transform: uppercase;
+  padding: 16px;
   max-width: fit-content;
+  margin: 10px auto;
+  text-transform: uppercase;
 }
 
-.link-button{
+.link-button {
   appearance: button;
   display: inline-block;
   text-decoration: none;
 }
 
-td .list-button{
-  background: $light-green;
-  border-radius: 2px;
-  color: $dark-grey;
-  display: block;
-  font-size: 12px;
-  padding: 5px 10px;
-  text-transform: uppercase;
+.list-button, a {
+  margin: 0px;
+  padding: 5px;
 }

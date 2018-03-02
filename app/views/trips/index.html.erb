@@ -1,24 +1,24 @@
 <%= render "sub_header" %>
-<div class="trips_table_index" id="current_trips">
+<div id="current_trips">
   <p class="title"><%= t(".current_trips") %></p>
   <%= link_to t(".add_trip"), new_trip_path, class: "link_button, button" %>
-  <table>
+  <table class="list-table">
     <%= render "trips_table_header" %>
     <%= render @current_trips %>
   </table>
 </div>
 
-<div class="trips_table_index" id="past_trips">
+<div id="past_trips">
   <p class="title"><%= t(".past_trips") %></p>
-  <table>
+  <table class="list-table">
     <%= render "trips_table_header" %>
     <%= render @past_trips %>
   </table>
 </div>
 
-<div class="trips_table_index" id="all_trips">
+<div id="all_trips">
   <p class="title"><%= t(".all_trips") %></p>
-  <table>
+  <table class="list-table">
     <%= render "trips_table_header" %>
     <%= render @trips %>
   </table>

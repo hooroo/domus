@@ -1,0 +1,12 @@
+table#table_of_link_buttons {
+  border-collapse: separate;
+  border-spacing: 15px;
+  margin-top: 5%;
+  width: 25%;
+}
+
+.link_buttons_in_table td {
+  background-color: $pale-lily;
+  font-size: $homepage-buttons-size;
+  padding: 1em;
+}

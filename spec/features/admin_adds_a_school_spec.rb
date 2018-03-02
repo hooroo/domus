@@ -4,8 +4,8 @@ feature "Admin adds a school" do
   scenario "successfully" do
     visit new_school_path
 
-    fill_in School.human_attribute_name(:name), with: "St. Peter"
-    fill_in School.human_attribute_name(:responsable_name), with: "Mr. Black"
+    fill_in "school_name", with: "St. Peter"
+    fill_in "school_responsable_name", with: "Mr. Black"
     fill_in "school_responsable_contact", with: "0123456789"
     click_on I18n.t("schools.form.submit")
 
