@@ -33,3 +33,11 @@
 #all_trips {
   display: none;
 }
+
+#active_families {
+  display: block;
+}
+
+#not_active_families, #all_families {
+  display: none;
+}
