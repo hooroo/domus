@@ -8,18 +8,29 @@
   </table>
 </div>
 
-<div id="not_active_families">
-  <p class="title"><%= t(".not_active_families") %></p>
-  <table>
-    <%= render "families_table_header" %>
-    <%= render @not_active_families %>
-  </table>
-</div>
+<section class="tabs">
+  <div class="tab active-families active">
+    <p class="title"><%= t("families.index.active_families") %></p>
+    <%= link_to t(".add_family"), new_family_path, class: "link_button, button" %>
+    <table>
+      <%= render "families_table_header" %>
+      <%= render @active_families %>
+    </table>
+  </div>
 
-<div id="all_families">
-  <p class="title"><%= t(".all_families") %></p>
-  <table>
-    <%= render "families_table_header" %>
-    <%= render @families %>
-  </table>
-</div>
+  <div class="tab inactive-families">
+    <p class="title"><%= t("families.index.inactive_families") %></p>
+    <table>
+      <%= render "families_table_header" %>
+      <%= render @inactive_families %>
+    </table>
+  </div>
+
+  <div class="tab all-families">
+    <p class="title"><%= t("families.index.all_families") %></p>
+    <table>
+      <%= render "families_table_header" %>
+      <%= render @families %>
+    </table>
+  </div>
+</section>
