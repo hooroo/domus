@@ -1,6 +1,8 @@
 class FamiliesController < ApplicationController
   def index
-    @families = Family.by_last_name.page(params[:page]).per(10)
+    @all_families = Family.all.by_last_name.limit(10)
+    @active_families = Family.active.by_last_name.limit(10)
+    @inactive_families = Family.inactive.by_last_name.limit(10)
   end
 
   def show

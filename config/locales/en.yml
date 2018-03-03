@@ -43,15 +43,20 @@ en:
       families: "Families"
       schools: "Schools"
       trips: "Trips"
+      en: "en"
+      it: "it"
   families:
     index:
-      title: "Families"
       add_family: "Add a Family"
-      destroy: "Destroy"
-      edit: "Update"
-      submit: "Add"
       destroy: "Delete"
       edit: "Edit"
+      active_families: "Active Families"
+      inactive_families: "Inactive Families"
+      all_families: "All families"
+      buttons:
+        active: "Active"
+        inactive: "Inactive"
+        all: "All"
     new:
       title: "Add a family"
       submit: "Add"
@@ -61,6 +66,15 @@ en:
       title: "Update family details"
     form:
       submit: "Submit"
+  active_families:
+    index:
+      title: "Active families"
+  inactive_families:
+    index:
+      title: "Inactive families"
+  all_families:
+    index:
+      title: "All families"
   schools:
     new:
       title: "Add a school"

@@ -1,5 +1,2 @@
-<% if I18n.locale == I18n.default_locale %>
-  <%= link_to "It", { locale: "it" } %>
-<% else %>
-  <%= link_to "En", { locale: "en" } %>
-<%end%>
+<%= link_to t("header.links.it"), { locale: "it" } %>
+<%= link_to t("header.links.en"), { locale: "en" } %>

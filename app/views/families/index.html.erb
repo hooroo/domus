@@ -1,7 +1,43 @@
-<p class="title"><%= t(".title") %></p>
-<%= link_to t(".add_family"), new_family_path, class: "link_button, button" %>
-<table class="list-table">
-  <%= render "families_table_header" %>
-  <%= render @families %>
-</table>
-<%= paginate @families %>
+<nav class="sub-header">
+  <ul>
+    <li>
+      <%= link_to t("families.index.buttons.active"), active_families_path,
+        class: "button", data: { target: "active-families" } %>
+    </li>
+    <li>
+      <%= link_to t("families.index.buttons.inactive"), inactive_families_path,
+        class: "button", data: { target: "inactive-families" } %>
+    </li>
+    <li>
+      <%= link_to t("families.index.buttons.all"), all_families_path,
+        class: "button", data: { target: "all-families" } %>
+    </li>
+  </ul>
+</nav>
+
+<section class="tabs">
+  <div class="tab active-families active">
+    <p class="title"><%= t(".active_families") %></p>
+    <%= link_to t(".add_family"), new_family_path, class: "link_button, button" %>
+    <table class="list-table">
+      <%= render "families_table_header" %>
+      <%= render @active_families %>
+    </table>
+  </div>
+
+  <div class="tab inactive-families">
+    <p class="title"><%= t(".inactive_families") %></p>
+    <table class="list-table">
+      <%= render "families_table_header" %>
+      <%= render @inactive_families %>
+    </table>
+  </div>
+
+  <div class="tab all-families">
+    <p class="title"><%= t(".all_families") %></p>
+    <table class="list-table">
+      <%= render "families_table_header" %>
+      <%= render @all_families %>
+    </table>
+  </div>
+</section>

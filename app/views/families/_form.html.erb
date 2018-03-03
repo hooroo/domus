@@ -23,7 +23,7 @@
     </li>
     <li>
       <%= f.label Family.human_attribute_name(:prof) %>
-      <%= f.input_field :prof, as: :radio_buttons, collection: ["Y", "N"] %>
+      <%= f.input_field :prof, as: :radio_buttons %>
     </li>
     <li>
       <%= f.label Family.human_attribute_name(:preferred_gender) %>
@@ -31,11 +31,11 @@
     </li>
     <li>
       <%= f.label Family.human_attribute_name(:bus_driver) %>
-      <%= f.input_field :bus_driver, as: :radio_buttons, collection: ["Y", "N"] %>
+      <%= f.input_field :bus_driver, as: :radio_buttons %>
     </li>
     <li>
       <%= f.label Family.human_attribute_name(:active) %>
-      <%= f.input_field :active, as: :radio_buttons, collection: ["Y", "N"] %>
+      <%= f.input_field :active, as: :radio_buttons %>
     </li>
     <li>
       <%= f.submit t(".submit") %>
