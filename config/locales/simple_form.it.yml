@@ -3,18 +3,24 @@ it:
     "yes": "Si"
     "no": "No"
     required:
-      text: "obbligatorio"
+      text: "richiesto"
       mark: "*"
     labels:
       family:
-        title: "Aggiungi una famiglia"
+        title: "Aggiungi famiglia"
         first_name: "Nome"
         last_name: "Cognome"
         address: "Indirizzo"
         animals: "Animali"
-        capability: "Capacita'"
+        capability: "Capacita"
         prof: "Prof"
         bus_driver: "Autisti"
         active: "Attiva"
-        preferred_gender: "Sesso Preferito"
+        preferred_gender: "Sesso preferito"
+        submit: "Aggiungi"
+      school:
+        name: "Nome"
+        responsable_name: "Nome responsabile"
+        responsable_contact: "Contatto responsabile"
+        notes: "Note"
         submit: "Aggiungi"

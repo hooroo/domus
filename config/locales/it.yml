@@ -1,20 +1,98 @@
 it:
-  application:
-    show:
-      title: "Famiglie"
+  defaults: &defaults
+    month_names:
+      [~, Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottabre, Novembre, Dicembre]
+    formats:
+       default: "%d-%m-%Y"
+       short: "%b %d"
+       long: "%B %d, %Y"
+  date:
+    <<: *defaults
+  time:
+    <<: *defaults
+  activerecord:
+    models:
+      family: "Famiglia"
+      school: "Scuola"
+    errors:
+      models:
+        trip:
+          start_date_in_the_past: "La data di inizio non puo' esser passata!"
+          start_date_after_end_date: "La data di inizio non puo esser prima di quella di inizio!"
+    attributes:
+      family:
+        first_name: "Nome"
+        last_name: "Cognome"
+        address: "Indirizzo"
+        animals: "Animali"
+        capability: "Disponibilita"
+        prof: "Prof"
+        bus_driver: "Autista"
+        active: "Attiva"
+        preferred_gender: "Sesso preferito"
+        f: "F"
+        m: "M"
+      school:
+        name: "Nome"
+        responsable_name: "Nome responsabile"
+        responsable_contact: "Contatto responsabile"
+        notes: "Note"
+      trip:
+        total_girls: "Ragazze"
+        total_boys: "Ragazzi"
+        total_teachers: "Professori"
+        total_bus_drivers: "Autisti"
+        start_date: "Dal"
+        end_date: "Al"
+        school_name: "Nome della scuola"
+  header:
+    links:
+      home: "Home Page"
+      families: "Famiglie"
+      schools: "Scuole"
+      trips: "Viaggi"
   families:
-    new:
-      title: "Aggiungi una famiglia"
-      first_name: "Name"
-      last_name: "Cognome"
-      address: "Indirizzo"
-      animals: "Animali"
-      capability: "Capacita'"
-      prof: "Prof"
-      bus_driver: "Autisti"
-      active: "Attiva"
-      preferred_gender: "Sesso Preferito"
-      submit: "Aggiungi"
     index:
       title: "Famiglie"
-      link: "Aggiungi Famiglia"
+      add_family: "Aggiungi una Famiglia"
+      destroy: "Elimina"
+      edit: "Modifica"
+      submit: "Aggungi"
+    new:
+      title: "Aggiungi una Famiglia"
+      submit: "Aggiungi"
+    show:
+      title: "Famiglia dettagli"
+    edit:
+      title: "Modifica dettagli famiglia"
+    form:
+      submit: "Aggiungi"
+  schools:
+    new:
+      title: "Aggiungi una scuola"
+    index:
+      title: "Scuole"
+      add_school: "Aggiungi una scuola"
+      destroy: "Elimina"
+      edit: "Modifica"
+    edit:
+      title: "Modifica Scuola"
+    form:
+      submit: "Aggiungi"
+  trips:
+    form:
+      submit: "Aggiungi"
+    new:
+      title: "Crea viaggio"
+    edit:
+      title: "Modifica viaggio"
+    index:
+      add_trip: "Aggiungi"
+      edit: "Modifica"
+      destroy: "Elimina"
+      current_trips_title: "Viaggi attuali"
+      past_trips_title: "Viaggi passati"
+      all_trips_title: "Tutti i viaggi"
+      current_trips: "Viaggi attuali"
+      past_trips: "Viaggi passati"
+      all_trips: "Tutti i viaggi"

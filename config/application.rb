@@ -17,6 +17,9 @@ module Domus
   class Application < Rails::Application
     config.app_generators.scaffold_controller :responders_controller
 
+    config.i18n.load_path += Dir[Rails.root.join("config", "locales", "**", "*.{rb,yml}")]
+    config.i18n.default_locale = :en
+
     config.action_controller.action_on_unpermitted_parameters = :raise
     config.load_defaults 5.1
     config.generators.system_tests = nil
