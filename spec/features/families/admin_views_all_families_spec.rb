@@ -9,7 +9,7 @@ feature "Admin can see all the families when in families#index" do
       visit families_path
       find("#all_families_button").click
 
-      expect(page).to have_text(I18n.t("families.index.all_families"))
+      expect(page).to have_text(I18n.t("families.index.buttons.all"))
       expect(page).to have_text("false")
       expect(page).to have_text("Scara")
       expect(page).to have_text("true")
