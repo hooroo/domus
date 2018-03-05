@@ -35,10 +35,14 @@
   display: block;
 }
 
+<<<<<<< HEAD
 #not_active_families {
   display: none;
 }
 
 #all_families {
+=======
+#inactive_families, #all_families {
+>>>>>>> e43fa21... Rename not_active_families into inactive_families
   display: none;
 }
