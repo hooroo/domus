@@ -52,9 +52,9 @@ en:
       inactive_families: "Inactive Families"
       all_families: "All families"
       buttons:
-        active: "ACTIVE"
-        inactive: "INACTIVE"
-        all: "ALL"
+        active: "Active"
+        inactive: "Inactive"
+        all: "All"
     new:
       title: "Add a family"
       submit: "Add"
