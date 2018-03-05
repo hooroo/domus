@@ -49,7 +49,7 @@ en:
       destroy: "Delete"
       edit: "Edit"
       active_families: "Families Active"
-      not_active_families: "Families Not Active"
+      inactive_families: "Families Not Active"
       all_families: "All families"
       buttons:
         active: "ACTIVE"
