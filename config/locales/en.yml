@@ -48,13 +48,13 @@ en:
       add_family: "Add a Family"
       destroy: "Delete"
       edit: "Edit"
-      active_families: "Families Active"
-      inactive_families: "Families Not Active"
+      active_families: "Active Families"
+      inactive_families: "Inactive Families"
       all_families: "All families"
       buttons:
-        active: "ACTIVE"
-        inactive: "INACTIVE"
-        all: "ALL"
+        active: "Active"
+        inactive: "Inactive"
+        all: "All"
     new:
       title: "Add a family"
       submit: "Add"
