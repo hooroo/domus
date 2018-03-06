@@ -7,7 +7,6 @@ feature "Admin can see all the families when in families#index" do
       create(:all_false_family)
 
       visit families_path
-      find("#all_families_button").click
 
       expect(page).to have_text(I18n.t("families.index.buttons.all"))
       expect(page).to have_text("false")
