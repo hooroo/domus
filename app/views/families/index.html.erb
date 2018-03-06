@@ -1,25 +1,40 @@
-<%= render "sub_header" %>
-<div id="active_families">
-  <p class="title"><%= t("families.index.buttons.active") %></p>
-  <%= link_to t("families.index.buttons.active"), new_family_path, class: "link_button, button" %>
-  <table>
-    <%= render "families_table_header" %>
-    <%= render @active_families %>
-  </table>
-</div>
+<nav class="sub-header">
+  <ul>
+    <li class="button" data-target="active-families">
+      <%= t("families.index.button_active_families") %>
+    </li>
+    <li class="button" data-target="inactive-families">
+      <a><%= t("families.index.button_not_active_families") %></a>
+    </li>
+    <li class="button" data-target="all-families">
+      <%= t("families.index.button_all_families") %>
+    </li>
+  </ul>
+</nav>
 
-<div id="inactive_families">
-  <p class="title"><%= t("families.index.buttons.inactive") %></p>
-  <table>
-    <%= render "families_table_header" %>
-    <%= render @inactive_families %>
-  </table>
-</div>
+<section class="tabs">
+  <div class="tab active-families active">
+    <p class="title"><%= t(".active_families") %></p>
+    <%= link_to t(".add_family"), new_family_path, class: "link_button, button" %>
+    <table>
+      <%= render "families_table_header" %>
+      <%= render @active_families %>
+    </table>
+  </div>
 
-<div id="all_families">
-  <p class="title"><%= t("families.index.buttons.all") %></p>
-  <table>
-    <%= render "families_table_header" %>
-    <%= render @families %>
-  </table>
-</div>
+  <div class="tab inactive-families">
+    <p class="title"><%= t(".not_active_families") %></p>
+    <table>
+      <%= render "families_table_header" %>
+      <%= render @not_active_families %>
+    </table>
+  </div>
+
+  <div class="tab all-families">
+    <p class="title"><%= t(".all_families") %></p>
+    <table>
+      <%= render "families_table_header" %>
+      <%= render @families %>
+    </table>
+  </div>
+</section>
