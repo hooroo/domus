@@ -43,6 +43,9 @@
   display: block;
 }
 
-#inactive_families, #all_families {
-  display: none;
+    &:hover, &.active {
+      background: $dark-green;
+      color: #fff;
+    }
+  }
 }
