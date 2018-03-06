@@ -2,42 +2,30 @@
   height: 50px;
   margin: 0 auto;
   max-width: 50%;
-}
 
-.sub-header ul {
-  display: flex;
-  height: 100%;
-  position: relative;
-}
+  ul {
+    display: flex;
+    height: 100%;
+    position: relative;
+  }
 
-.sub-header li {
-  align-items: center;
-  background: $pale-pink;
-  cursor: pointer;
-  display: flex;
-  flex: 1;
-  justify-content: center;
-  list-style: none;
-  margin: 10px;
-  padding: 25px;
-}
+  li {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    list-style: none;
+  }
 
-#current_trip{
-  display: block;
-}
+  a {
+    background: $water-green;
+    border: 1px solid $dark-green;
+    color: $dark-green;
+    margin: 10px;
 
-#past_trips {
-  display: none;
-}
-
-#all_trips {
-  display: none;
-}
-
-#active_families {
-  display: block;
-}
-
-#inactive_families, #all_families {
-  display: none;
+    &:hover, &.active {
+      background: $dark-green;
+      color: #fff;
+    }
+  }
 }
