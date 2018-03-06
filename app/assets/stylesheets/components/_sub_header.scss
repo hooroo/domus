@@ -31,18 +31,29 @@
   }
 }
 
-#active_families {
-  display: block;
-}
+  ul {
+    display: flex;
+    height: 100%;
+    position: relative;
+  }
 
-<<<<<<< HEAD
-#not_active_families {
-  display: none;
-}
+  li {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    list-style: none;
+  }
 
-#all_families {
-=======
-#inactive_families, #all_families {
->>>>>>> e43fa21... Rename not_active_families into inactive_families
-  display: none;
+  a {
+    background: $water-green;
+    border: 1px solid $dark-green;
+    color: $dark-green;
+    margin: 10px;
+
+    &:hover, &.active {
+      background: $dark-green;
+      color: #fff;
+    }
+  }
 }
