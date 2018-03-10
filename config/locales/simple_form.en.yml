@@ -20,7 +20,7 @@ en:
         submit: "Add"
       school:
         name: name
-        responsable_name: responsable name
-        responsable_contact: responsable contact
+        responsible_name: responsible name
+        responsible_contact: responsible contact
         notes: notes
         submit: Add

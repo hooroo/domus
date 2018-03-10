@@ -6,8 +6,8 @@ FactoryBot.define do
 
   factory :school do
     name "Cegli Messapica"
-    responsable_name "Maria"
-    responsable_contact "3397308986"
+    responsible_name "Maria"
+    responsible_contact "3397308986"
   end
 
   factory :trip do

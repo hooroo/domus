@@ -1,11 +1,11 @@
 <tr>
+  <td><%= trip.school_name %></td>
+  <td><%= l(trip.start_date) %></td>
+  <td><%= l(trip.end_date) %></td>
   <td><%= trip.total_girls %></td>
   <td><%= trip.total_boys %></td>
   <td><%= trip.total_teachers %></td>
   <td><%= trip.total_bus_drivers %></td>
-  <td><%= l(trip.start_date) %></td>
-  <td><%= l(trip.end_date) %></td>
-  <td><%= trip.school_name %></td>
   <td>
     <%= link_to t("trips.index.edit"),
     edit_trip_path(trip),

@@ -20,7 +20,7 @@ it:
         submit: "Aggiungi"
       school:
         name: "Nome"
-        responsable_name: "Nome responsabile"
-        responsable_contact: "Contatto responsabile"
+        responsible_name: "Nome responsabile"
+        responsible_contact: "Contatto responsabile"
         notes: "Note"
         submit: "Aggiungi"

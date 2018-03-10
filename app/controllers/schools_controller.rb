@@ -33,8 +33,8 @@ class SchoolsController < ApplicationController
   def school_params
     params.require(:school).permit(
       :name,
-      :responsable_name,
-      :responsable_contact,
+      :responsible_name,
+      :responsible_contact,
       :notes,
     )
   end

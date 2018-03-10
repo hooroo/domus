@@ -20,14 +20,14 @@ en:
         address: "Address"
         animals: "Animals"
         capability: "Capability"
-        prof: "Prof"
+        prof: "Teacher"
         bus_driver: "Bus Driver"
         active: "Active"
         preferred_gender: "Preferred Gender"
       school:
         name: "Name"
-        responsable_name: "Responsable name"
-        responsable_contact: "Responsable contact"
+        responsible_name: "Responsible name"
+        responsible_contact: "Responsible contact"
         notes: "Notes"
       trip:
         total_girls: "Girls"

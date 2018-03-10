@@ -22,8 +22,8 @@ if Rails.env.development?
         :school,
         5,
         name: FFaker::AddressFR.city,
-        responsable_name: FFaker::NameFR.name,
-        responsable_contact: FFaker::PhoneNumberFR.mobile_phone_number,
+        responsible_name: FFaker::NameFR.name,
+        responsible_contact: FFaker::PhoneNumberFR.mobile_phone_number,
         notes: FFaker::Lorem.phrase,
       )
 

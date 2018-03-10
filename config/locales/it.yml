@@ -34,8 +34,8 @@ it:
         m: "M"
       school:
         name: "Nome"
-        responsable_name: "Nome responsabile"
-        responsable_contact: "Contatto responsabile"
+        responsible_name: "Nome responsabile"
+        responsible_contact: "Contatto responsabile"
         notes: "Note"
       trip:
         total_girls: "Ragazze"

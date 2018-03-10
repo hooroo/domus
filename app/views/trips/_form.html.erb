@@ -2,6 +2,18 @@
   <%= simple_form_for trip do |f| %>
   <ul>
     <li>
+      <%= f.label :school %>
+      <%= f.collection_select :school_id, School.all, :id, :name, include_blank: "" %>
+    </li>
+    <li>
+      <%= f.label Trip.human_attribute_name(:start_date) %>
+      <%= f.input_field :start_date, order: [:day, :month, :year], selected: 1.day.from_now %>
+    </li>
+    <li>
+      <%= f.label Trip.human_attribute_name(:end_date) %>
+      <%= f.input_field :end_date, order: [:day, :month, :year], selected: 5.days.from_now %>
+    </li>
+    <li>
       <%= f.label Trip.human_attribute_name(:total_girls) %>
       <%= f.input_field :total_girls %>
     </li>
@@ -16,18 +28,6 @@
     <li>
       <%= f.label Trip.human_attribute_name(:total_bus_drivers) %>
       <%= f.input_field :total_bus_drivers %>
-    </li>
-    <li>
-      <%= f.label Trip.human_attribute_name(:start_date) %>
-      <%= f.input_field :start_date, order: [:day, :month, :year], selected: 1.day.from_now %>
-    </li>
-    <li>
-      <%= f.label Trip.human_attribute_name(:end_date) %>
-      <%= f.input_field :end_date, order: [:day, :month, :year], selected: 5.days.from_now %>
-    </li>
-    <li>
-      <%= f.label :school %>
-      <%= f.collection_select :school_id, School.all, :id, :name, include_blank: "" %>
     </li>
     <li>
       <%= f.submit t(".submit") %>

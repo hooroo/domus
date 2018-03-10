@@ -5,8 +5,8 @@ feature "Admin adds a school" do
     visit new_school_path
 
     fill_in "school_name", with: "St. Peter"
-    fill_in "school_responsable_name", with: "Mr. Black"
-    fill_in "school_responsable_contact", with: "0123456789"
+    fill_in "school_responsible_name", with: "Mr. Black"
+    fill_in "school_responsible_contact", with: "0123456789"
     click_on I18n.t("schools.form.submit")
 
     expect(page).to have_text(

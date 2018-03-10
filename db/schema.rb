@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 20180220091854) do
 
   create_table "schools", force: :cascade do |t|
     t.string "name", null: false
-    t.string "responsable_name", null: false
-    t.string "responsable_contact", null: false
+    t.string "responsible_name", null: false
+    t.string "responsible_contact", null: false
     t.text "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
