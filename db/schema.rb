@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20180220091854) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -50,5 +49,4 @@ ActiveRecord::Schema.define(version: 20180220091854) do
     t.datetime "updated_at", null: false
     t.index ["school_id"], name: "index_trips_on_school_id"
   end
-
 end

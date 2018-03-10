@@ -1,0 +1,22 @@
+.pagination a, .pagination span.current, .pagination span.gap {
+  background-color: $pale-lily;
+  border: 1px solid $light-grey;
+  border-left-width: 0;
+  float: left;
+  line-height: 30px;
+  padding: 0 14px;
+  text-decoration: none;
+}
+
+.pagination span.current {
+  background-color: $pale-prune;
+}
+
+.pagination {
+  border-left: 1px solid $light-grey;
+  .first, .prev, .page, .next, .last {
+    border: none;
+    float: none;
+    padding: 0;
+  }
+}
