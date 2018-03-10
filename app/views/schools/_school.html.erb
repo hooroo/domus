@@ -2,7 +2,7 @@
   <td><%= school.name %></td>
   <td><%= school.responsible_name %></td>
   <td><%= school.responsible_contact %></td>
-  <td><%= school.notes %></td>
+  <td><%= truncate(school.notes) %></td>
   <td><%= link_to t("schools.index.destroy"), school_path(school), method: :delete, class: "list-button" %></td>
   <td><%= link_to t("schools.index.edit"), edit_school_path(school), class: "list-button" %></td>
 </tr>
