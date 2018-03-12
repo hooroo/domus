@@ -30,22 +30,3 @@
     }
   }
 }
-
-#active_families {
-  display: block;
-}
-
-#inactive_families, #all_families {
-  display: none;
-}
-
-#active_families {
-  display: block;
-}
-
-    &:hover, &.active {
-      background: $dark-green;
-      color: #fff;
-    }
-  }
-}
