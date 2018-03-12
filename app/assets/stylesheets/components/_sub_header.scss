@@ -18,13 +18,14 @@
   }
 
   a {
-    background: $water-green;
-    border: 1px solid $dark-green;
-    color: $dark-green;
+    background: $pale-pink;
+    border: 1px solid $pale-prune;
+    color: $pale-prune;
     margin: 10px;
 
     &:hover, &.active {
-      background: $dark-green;
+      background: $pale-prune;
+      border: 1px solid $pale-pink;
       color: #fff;
     }
   }
