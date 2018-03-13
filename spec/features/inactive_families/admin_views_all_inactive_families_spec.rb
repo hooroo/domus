@@ -1,13 +1,13 @@
 require "rails_helper"
 
-feature "Admin can see all the not active families when in families#index" do
-  context "when click on the 'Not Active' button" do
-    scenario "successfully", js: true do
+feature "Admin can see all the inactive families when in families#index" do
+  context "when click on the 'Inactive' button" do
+    scenario "successfully" do
       create(:all_true_family)
       create(:all_false_family)
 
       visit families_path
-      click_link("Inactive")
+      click_link(I18n.t("families.index.buttons.inactive"))
 
       expect(page).to have_content("false", count: 3)
       expect(page).not_to have_content("true")
