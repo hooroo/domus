@@ -1,19 +1,16 @@
 <nav class="sub-header">
   <ul>
     <li>
-      <a href="active_families" class="button" data-target="active-families">
-        <%= t("families.index.buttons.active") %>
-      </a>
+      <%= link_to t("families.index.buttons.active"), active_families_path,
+        class: "button", data: { target: "active-families" } %>
     </li>
     <li>
-      <a href="inactive_families" class="button" data-target="inactive-families">
-        <%= t("families.index.buttons.inactive") %>
-      </a>
+      <%= link_to t("families.index.buttons.inactive"), inactive_families_path,
+        class: "button", data: { target: "inactive-families" } %>
     </li>
     <li>
-      <a href="all_families" class="button" data-target="all-families">
-        <%= t("families.index.buttons.all") %>
-      </a>
+      <%= link_to t("families.index.buttons.all"), all_families_path,
+        class: "button", data: { target: "all-families" } %>
     </li>
   </ul>
 </nav>
