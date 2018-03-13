@@ -64,6 +64,15 @@ en:
       title: "Update family details"
     form:
       submit: "Submit"
+  active_families:
+    index:
+      title: "Active families"
+  inactive_families:
+    index:
+      title: "Inactive families"
+  all_families:
+    index:
+      title: "All families"
   schools:
     new:
       title: "Add a school"
