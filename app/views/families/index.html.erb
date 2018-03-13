@@ -6,7 +6,7 @@
     <%= link_to t(".add_family"), new_family_path, class: "link_button, button" %>
     <table class="list-table">
       <%= render "families_table_header" %>
-      <%= render @active_families %>
+      <%= render @families, locals: {variable: @active_families } %>
     </table>
   </div>
 
