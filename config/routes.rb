@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'all_families/index'
-
   scope "(:locale)", locale: /en|it/ do
     resources :active_families, only: [:index]
     resources :all_families, only: [:index]
