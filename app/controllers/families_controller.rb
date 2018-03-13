@@ -1,7 +1,6 @@
 class FamiliesController < ApplicationController
   def index
     @families = Family.all
-    @active_families = Family.active
     @inactive_families = Family.inactive
   end
 
