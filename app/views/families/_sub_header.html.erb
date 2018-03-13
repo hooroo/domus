@@ -1,0 +1,16 @@
+<nav class="sub-header">
+  <ul>
+    <li>
+      <%= link_to t("families.index.buttons.active"), active_families_path,
+        class: "button", data: { target: "active-families" } %>
+    </li>
+    <li>
+      <%= link_to t("families.index.buttons.inactive"), inactive_families_path,
+        class: "button", data: { target: "inactive-families" } %>
+    </li>
+    <li>
+      <%= link_to t("families.index.buttons.all"), all_families_path,
+        class: "button", data: { target: "all-families" } %>
+    </li>
+  </ul>
+</nav>

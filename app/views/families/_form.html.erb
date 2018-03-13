@@ -35,7 +35,7 @@
     </li>
     <li>
       <%= f.label Family.human_attribute_name(:active) %>
-      <%= f.input_field :active, as: :radio_buttons, collection: ["Y", "N"] %>
+      <%= f.input_field :active, as: :radio_buttons, collection: ["true", "false"] %>
     </li>
     <li>
       <%= f.submit t(".submit") %>

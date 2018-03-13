@@ -53,11 +53,16 @@ it:
       trips: "Viaggi"
   families:
     index:
-      title: "Famiglie"
-      add_family: "Aggiungi una Famiglia"
+      add_family: "Aggungi"
       destroy: "Elimina"
       edit: "Modifica"
-      submit: "Aggungi"
+      active_families: "Famiglie Attive"
+      inactive_families: "Famiglie Inattive"
+      all_families: "Tutte le famiglie"
+      buttons:
+        active: "Attive"
+        inactive: "Inattive"
+        all: "Tutte"
     new:
       title: "Aggiungi una Famiglia"
       submit: "Aggiungi"

@@ -2,6 +2,36 @@ FactoryBot.define do
   factory :family do
     last_name "Smiriglia"
     capability { [2, 3, 4, 5].sample }
+
+    trait :active do
+      active true
+    end
+
+    trait :inactive do
+      active false
+    end
+
+    trait :with_teacher do
+      prof true
+    end
+
+    trait :without_teacher do
+      prof false
+    end
+
+    trait :with_bus_driver do
+      bus_driver true
+    end
+
+    trait :without_bus_driver do
+      bus_driver false
+    end
+
+    factory :all_true_family,
+      traits: [:active, :with_teacher, :with_bus_driver]
+
+    factory :all_false_family,
+      traits: [:inactive, :without_teacher, :without_bus_driver]
   end
 
   factory :school do

@@ -1,6 +1,8 @@
 class FamiliesController < ApplicationController
   def index
-    @families = Family.all
+    @all_families = Family.all.limit(10)
+    @active_families = Family.active.limit(10)
+    @inactive_families = Family.inactive.limit(10)
   end
 
   def show
