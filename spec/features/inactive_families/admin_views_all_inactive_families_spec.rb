@@ -7,7 +7,7 @@ feature "Admin can see all the not active families when in families#index" do
       create(:all_false_family)
 
       visit families_path
-      find("a", text: "INACTIVE").click
+      click_link("Inactive")
 
       expect(page).to have_content("false", count: 3)
       expect(page).not_to have_content("true")
