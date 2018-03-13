@@ -1,0 +1,7 @@
+<p class="title"><%= t(".inactive_families") %></p>
+<table class="list-table">
+  <%= render "families/families_table_header" %>
+  <% @families.each do |family| -%>
+    <%= render "families/family", family: family %>
+  <% end %>
+</table>
