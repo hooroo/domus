@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     resources :inactive_families, only: [:index]
     resources :schools, only: [:index, :new, :create, :edit, :update, :destroy]
     resources :trips, only: [:index, :new, :create, :edit, :update, :destroy]
+    resources :current_trips, only: [:index]
+    resources :past_trips, only: [:index]
+    resources :all_trips, only: [:index]
     resources :pages, only: [:show]
 
     root "pages#show"
