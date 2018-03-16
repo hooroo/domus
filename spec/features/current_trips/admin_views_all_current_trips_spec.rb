@@ -5,12 +5,14 @@ feature "Admin sees all the current trips" do
     scenario "successfully" do
       school1 = create(:school, name: "St. Paul")
       school2 = create(:school, name: "St. Peter")
-      build_stubbed(
+      past_trip = build_stubbed(
         :trip,
         school_id: school1.id,
         start_date: 2.month.ago,
         end_date: 1.month.ago,
       )
+      allow(Trip).to receive(:past).and_return([past_trip])
+
       create(
         :trip,
         school_id: school2.id,
