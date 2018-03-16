@@ -1,7 +1,7 @@
 <%= render "sub_header" %>
 <section class="tabs">
   <div class="tab current-trips active">
-    <p class="title"><%= t(".current_trips") %></p>
+    <h1><%= t(".current_trips") %></h1>
     <%= link_to t(".add_trip"), new_trip_path, class: "link_button, button" %>
     <table class="list-table">
       <%= render "trips_table_header" %>
@@ -10,7 +10,7 @@
   </div>
 
   <div class="tab past-trips">
-    <p class="title"><%= t(".past_trips") %></p>
+    <h1><%= t(".past_trips") %></h1>
     <table class="list-table">
       <%= render "trips_table_header" %>
       <%= render @past_trips %>
@@ -18,7 +18,7 @@
   </div>
 
   <div class="tab all-trips">
-    <p class="title"><%= t(".all_trips") %></p>
+    <h1><%= t(".all_trips") %></h1>
     <table class="list-table">
       <%= render "trips_table_header" %>
       <%= render @all_trips %>
