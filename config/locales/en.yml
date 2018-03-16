@@ -105,3 +105,16 @@ en:
       current_trips: "Current Trips"
       past_trips: "Past Trips"
       all_trips: "All Trips"
+      buttons:
+        current: "Current Trips"
+        past: "Past Trips"
+        all: "All Trips"
+  current_trips:
+    index:
+      title: "Current Trips"
+  past_trips:
+    index:
+      title: "Past Trips"
+  all_trips:
+    index:
+      title: "All Trips"

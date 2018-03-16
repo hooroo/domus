@@ -1,25 +1,27 @@
 <%= render "sub_header" %>
-<div id="current_trips">
-  <p class="title"><%= t(".current_trips") %></p>
-  <%= link_to t(".add_trip"), new_trip_path, class: "link_button, button" %>
-  <table class="list-table">
-    <%= render "trips_table_header" %>
-    <%= render @current_trips %>
-  </table>
-</div>
+<section class="tabs">
+  <div class="tab current-trips active">
+    <p class="title"><%= t(".current_trips") %></p>
+    <%= link_to t(".add_trip"), new_trip_path, class: "link_button, button" %>
+    <table class="list-table">
+      <%= render "trips_table_header" %>
+      <%= render @current_trips %>
+    </table>
+  </div>
 
-<div id="past_trips">
-  <p class="title"><%= t(".past_trips") %></p>
-  <table class="list-table">
-    <%= render "trips_table_header" %>
-    <%= render @past_trips %>
-  </table>
-</div>
+  <div class="tab past-trips">
+    <p class="title"><%= t(".past_trips") %></p>
+    <table class="list-table">
+      <%= render "trips_table_header" %>
+      <%= render @past_trips %>
+    </table>
+  </div>
 
-<div id="all_trips">
-  <p class="title"><%= t(".all_trips") %></p>
-  <table class="list-table">
-    <%= render "trips_table_header" %>
-    <%= render @trips %>
-  </table>
-</div>
+  <div class="tab all-trips">
+    <p class="title"><%= t(".all_trips") %></p>
+    <table class="list-table">
+      <%= render "trips_table_header" %>
+      <%= render @all_trips %>
+    </table>
+  </div>
+</section>
