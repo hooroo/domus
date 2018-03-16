@@ -1,8 +1,8 @@
 class TripsController < ApplicationController
   def index
-    @all_trips = Trip.all.limit(10)
-    @current_trips = Trip.current.by_start_date.limit(10)
-    @past_trips = Trip.past.limit(10)
+    @all_trips = Trip.all
+    @current_trips = Trip.current.by_start_date
+    @past_trips = Trip.past
   end
 
   def new
