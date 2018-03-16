@@ -1,0 +1,7 @@
+<p class="title"><%= t(".title") %></p>
+<table class="list-table">
+  <%= render "trips/trips_table_header" %>
+  <% @trips.each do |trip| -%>
+    <%= render "trips/trip", trip: trip %>
+  <% end %>
+</table>

@@ -1,13 +1,16 @@
 <nav class="sub-header">
   <ul>
-    <li id="current_trips_button" onclick="showCurrentTrips()">
-      <%= t("trips.index.current_trips_title") %>
+    <li>
+      <%= link_to t("trips.index.buttons.current"), current_trips_path,
+        class: "button", data: { target: "current-trips" } %>
     </li>
-    <li id="past_trips_button" onclick="showPastTrips()">
-      <%= t("trips.index.past_trips_title") %>
+    <li>
+      <%= link_to t("trips.index.buttons.past"), past_trips_path,
+        class: "button", data: { target: "past-trips" } %>
     </li>
-    <li id="all_trips_button" onclick="showAllTrips()">
-      <%= t("trips.index.all_trips_title") %>
+    <li>
+      <%= link_to t("trips.index.buttons.all"), all_trips_path,
+        class: "button", data: { target: "all-trips" } %>
     </li>
   </ul>
 </nav>
