@@ -1,4 +1,20 @@
-<%= render "sub_header" %>
+<nav class="sub-header">
+  <ul>
+    <li>
+      <%= link_to t("trips.index.buttons.current"), current_trips_path,
+        class: "button", data: { target: "current-trips" } %>
+    </li>
+    <li>
+      <%= link_to t("trips.index.buttons.past"), past_trips_path,
+        class: "button", data: { target: "past-trips" } %>
+    </li>
+    <li>
+      <%= link_to t("trips.index.buttons.all"), all_trips_path,
+        class: "button", data: { target: "all-trips" } %>
+    </li>
+  </ul>
+</nav>
+
 <section class="tabs">
   <div class="tab current-trips active">
     <h1><%= t(".current_trips") %></h1>
