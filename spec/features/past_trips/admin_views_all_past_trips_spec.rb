@@ -23,8 +23,8 @@ feature "Admin sees all the past trips" do
       visit trips_path
       click_link(I18n.t("trips.index.buttons.past"))
 
-      expect(page).not_to have_content("St. Peter")
-      expect(page).to have_content("St. Paul")
+      expect(page).not_to have_text("St. Peter")
+      expect(page).to have_text("St. Paul")
     end
   end
 end
